@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+	const handleClick = (e) => {
+		const elem = e.currentTarget;
+		elem.style.zIndex = "999";
+		elem.style.height = "100%";
+		elem.style.width = "100%";
+	}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+		<>
+			<section className="section-area" id='help'></section>
+    	<section className="section-area" id='info1' onClick={handleClick}></section>
+    	<section className="section-area" id='info2' onClick={handleClick}></section>
+    	<section className="section-area" id='settings' onClick={handleClick}></section>
+    	<section className="section-area" id='location' onClick={handleClick}></section>
+		</>
   );
 }
 
