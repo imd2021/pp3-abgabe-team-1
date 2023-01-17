@@ -1,39 +1,40 @@
 .section-area {
-	position: absolute;
-	transition: all 200ms ease-out;
+  position: absolute;
+  transition: all 200ms ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#info1 {
-	background-color: #6FC653;
-	width: 50vw;
-	height: 50vw;
-	top: 0;
-	left: 0;
+.section-area img {
+  width: 60%;
 }
-#info2 {
-	background-color: #FF9D28;
-	width: 50vw;
-	height: 50vw;
-	top: 0;
-	right: 0;
+
+#getHelp {
+  background-color: #6fc653;
+  width: 50vw;
+  height: 50vw;
+  top: 0;
+  left: 0;
+}
+#help {
+  background-color: #ff9d28;
+  width: 50vw;
+  height: 50vw;
+  top: 0;
+  right: 0;
 }
 #settings {
-	background-color: #9F54FF;
-	width: 50vw;
-	height: 50vw;
-	bottom: 0;
-	left: 0;
+  background-color: #9f54ff;
+  width: 50vw;
+  height: 50vw;
+  bottom: 0;
+  left: 0;
 }
 #location {
-	background-color: #FF4874;
-	width: 50vw;
-	height: 50vw;
-	bottom: 0;
-	right: 0;
-}
-
-#help {
-	background-color: #3F3FC2;
-	width: 100%;
-	height: 100%;
+  background-color: #ff4874;
+  width: 50vw;
+  height: 50vw;
+  bottom: 0;
+  right: 0;
 }
