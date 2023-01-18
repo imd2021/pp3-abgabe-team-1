@@ -1,3 +1,10 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	color: white;
+}
 
 #location {
 	background-color: #FF4874;
@@ -5,9 +12,32 @@
 	height: 100vh;
 }
 
+.empty-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.empty-info {
+	width: 85%;
+}
+.empty-info h1 {
+	text-align: start;
+	margin-bottom: 1.5rem;
+}
+.empty-info h1 span {
+	color: #FF4874;
+	background-color: white;
+	padding: 0 8px;
+	margin: 0 12px;
+}
+.empty-info p {
+	font-size: 1.25rem;
+}
 
-.content {
-	z-index: 99;
+.location-content {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -20,27 +50,19 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	color: white;
 	margin-top: 14vh;
 }
 .destination__name {
 	margin-bottom: 0.5rem;
 }
 
-.info {
+.destination-info {
 	width: 100%;
 	display: flex;
 	align-items: baseline;
 	justify-content: space-around;
-	color: white;
 	margin-bottom: 16vh;
 }
-/* .info__distance {
-
-}
-.info__wagon {
-
-} */
 
 .exit-btn {
 	position: absolute;

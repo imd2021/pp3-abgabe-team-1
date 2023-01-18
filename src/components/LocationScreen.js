@@ -18,9 +18,14 @@ const LocationScreen = () => {
 		<>
 			<section className="section-area" id="location">
 				{personFound ? (
-					<div></div>
+					<div className="empty-content">
+						<div className="empty-info">
+							<h1><span>YUHU!</span></h1>
+							<p>Es benötigt gerade niemand in deinem Umfeld Hilfe!</p>
+						</div>
+					</div>
 				) : (
-					<div className="content">
+					<div className="location-content">
 						<div className="destination">
 							<h2 className="destination__name">Name</h2>
 							<img
@@ -36,17 +41,17 @@ const LocationScreen = () => {
 							alt="Direction Arrow"
 						/>
 
-						<div className="info">
-							<h1 className="info__distance">
+						<div className="destination-info">
+							<h1>
 								<span id="distance">15</span> M
 							</h1>
-							<h2 className="info__wagon">
+							<h2>
 								Wagon <span id="wagon">20</span>
 							</h2>
 						</div>
 					</div>
 				)}
-				
+
 				{personFound ? (
 					<SectionBottom color="#FF9D28" handleClick={handleFound}>
 						<img className="section__icon" src={help} alt="Lifebelt" />
