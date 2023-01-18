@@ -6,17 +6,10 @@
   justify-content: center;
 }
 
-.section-area img {
+.icon {
   width: 60%;
 }
 
-#getHelp {
-  background-color: #6fc653;
-  width: 50vw;
-  height: 50vw;
-  top: 0;
-  left: 0;
-}
 #help {
   background-color: #ff9d28;
   width: 50vw;

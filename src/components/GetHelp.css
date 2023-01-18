@@ -1,0 +1,28 @@
+.section-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vw;
+  width: 50vw;
+  background-color: #4caf50;
+}
+
+.section-area.expanded {
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+}
+
+.help-text-container {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.help-text-container button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  margin: 2vw;
+}
