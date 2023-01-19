@@ -3,12 +3,16 @@ import Cross from "../assets/icons/Cross.svg";
 import "./Emergency.css";
 
 function Emergency() {
+  // state to keep track of whether the text field is shown
   const [showTextField, setShowTextField] = useState(false);
+  // state to keep track of whether the final text is shown
   const [showFinalText, setShowFinalText] = useState(false);
+  // state to keep track of the countdown
   const [countdown, setCountdown] = useState(5);
+  // state to keep track of the timer id
   const [timerId, setTimerId] = useState(null);
 
-  // Setzt Timer zurück und kehrt zurück zum Hilfe-Button
+  // function to handle going back to the help button
   const handleGoBack = () => {
     clearInterval(timerId);
     setCountdown(5);
@@ -17,11 +21,13 @@ function Emergency() {
     setShowFinalText(false);
   };
 
-  //Timer für den Hilferuf
+  // function to handle the timer for the emergency call
   const handleTimer = (e) => {
     setShowTextField(true);
+    // start countdown
     const id = setInterval(() => {
       setCountdown((prevCount) => {
+        // when countdown reaches 0, display final text
         if (prevCount === 0) {
           clearInterval(timerId);
           setShowFinalText(true);

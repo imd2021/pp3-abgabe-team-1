@@ -1,27 +1,28 @@
-.section-area-gethelp {
+.section-area-help {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50vw;
   width: 50vw;
-  background-color: #4caf50;
+  right: 0;
+  background-color: #ff9d28;
   position: absolute;
   transition: all 200ms ease-out;
 }
 
-.section-area-gethelp.expanded {
+.section-area-help.expanded {
   height: 100%;
   width: 100%;
   z-index: 1001;
 }
 
-.get-help-text-container {
+.help-text-container {
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
 }
 
-.get-help-text-container button {
+.help-text-container button {
   background-color: #ffffff;
   color: #000000;
   border: none;

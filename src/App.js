@@ -1,6 +1,6 @@
 import Emergency from "./components/Emergency";
 import GetHelp from "./components/GetHelp";
-import HelpIcon from "./assets/icons/Help.svg";
+import Help from "./components/Help";
 import settingsIcon from "./assets/icons/Settings.svg";
 import locationIcon from "./assets/icons/Location.svg";
 import "./App.css";
@@ -16,9 +16,7 @@ function App() {
     <>
       <Emergency />
       <GetHelp />
-      <section className="section-area" id="help" onClick={handleClick}>
-        <img className="icon" src={HelpIcon} alt="Helfen" />
-      </section>
+      <Help />
       <section className="section-area" id="settings" onClick={handleClick}>
         <img className="icon" src={settingsIcon} alt="Einstellungen" />
       </section>

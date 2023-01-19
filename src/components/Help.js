@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import stopIcon from "../assets/icons/Stop.svg";
-import "./GetHelp.css";
+import HelpIcon from "../assets/icons/Help.svg";
+import "./Help.css";
 
-function GetHelp() {
+function Help() {
   // state to keep track of the current index of the cards
   const [currentIndex, setCurrentIndex] = useState(0);
   // state to keep track of whether the help text is displayed
@@ -13,9 +13,9 @@ function GetHelp() {
 
   // array of cards to display
   const cards = [
-    { title: "Ich werde belästigt", content: "Renn um dein Leben." },
+    { title: "So kannst du helfen", content: "gar nicht lol" },
     {
-      title: "Ich werde immer noch belästigt",
+      title: "so kannst du helfen",
       content: "Relax. Take it eeeeeeaaaasy",
     },
   ];
@@ -45,7 +45,7 @@ function GetHelp() {
   };
 
   // function to handle the event when the "Get Help" button is clicked
-  const handleGetHelpClick = () => {
+  const handleHelpClick = () => {
     setShowHelpText(true);
     setIsExpanded(true);
   };
@@ -59,14 +59,14 @@ function GetHelp() {
 
   return (
     <section
-      className={`section-area-gethelp ${isExpanded ? "expanded" : ""}`}
-      id="getHelp"
-      onClick={handleGetHelpClick}
+      className={`section-area-help ${isExpanded ? "expanded" : ""}`}
+      id="Help"
+      onClick={handleHelpClick}
       {...handlers}
     >
       {/* Conditional rendering: if showHelpText is true, display the help text, otherwise, display the stop icon */}
       {showHelpText ? (
-        <div className="get-help-text-container">
+        <div className="help-text-container">
           <button onClick={handleBackToHomeClick}>Back to Home</button>
           <div>
             <h1>{cards[currentIndex].title}</h1>
@@ -74,10 +74,10 @@ function GetHelp() {
           </div>
         </div>
       ) : (
-        <img className="icon" src={stopIcon} alt="Hilfe erhalten" />
+        <img className="icon" src={HelpIcon} alt="Hilfe erhalten" />
       )}
     </section>
   );
 }
 
-export default GetHelp;
+export default Help;
