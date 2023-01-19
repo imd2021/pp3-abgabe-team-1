@@ -6,6 +6,10 @@ body {
 	color: white;
 }
 
+h2 {
+	font-weight: normal;
+}
+
 #location {
 	background-color: #FF4874;
 	width: 100%;
