@@ -1,5 +1,6 @@
 import React from "react";
 import "./SettingsScreen.css";
+import Setting from "./Setting";
 import exit from "../assets/exit.svg";
 
 const SettingsScreen = () => {
@@ -7,48 +8,25 @@ const SettingsScreen = () => {
 		<>
 			<section className="section-area" id="settings">
 				<div className="settings-container">
-					<article className="setting">
-						<div className="setting__head">
-							<h2>Tasten&shy;kombination</h2>
-							<label className="setting__switch">
-								<input type="checkbox" />
-								<span className="slider"></span>
-							</label>
-						</div>
-						<p className="setting__description">
-							Stelle hier deine Tastenkombination ein um schnell einen Hilferuf
-							absenden zu können!
-						</p>
-						<div className="setting__values">
-							<p>
-								<b>Taste 1:</b> Leiser-Taste <br />
-								<b>Taste 2:</b> Leiser-Taste <br />
-								<b>Art:</b> Schnell hintereinander
-							</p>
-							<p className="edit">Bearbeiten</p>
-						</div>
-					</article>
-
-					<article className="setting">
-						<div className="setting__head">
-							<h2>Persönliche Informationen</h2>
-							<label className="setting__switch">
-								<input type="checkbox" />
-								<span className="slider"></span>
-							</label>
-						</div>
-						<p className="setting__description">
-							Hier kannst du Informationen angeben, die im Ernstfall nützlich
-							sein könnten, um dich zu finden!
-						</p>
-						<div className="setting__values">
-							<p>
-								<b>Vorname:</b> Max <br />
-								<b>Nachname:</b> Mustermann
-							</p>
-							<p className="edit">Bearbeiten</p>
-						</div>
-					</article>
+					<Setting
+						heading="Tasten&shy;kombination"
+						description="Stelle hier deine Tastenkombination ein um schnell einen Hilferuf absenden zu können!"
+						values={[
+							{ name: "Taste 1", value: "Leiser-Taste" },
+							{ name: "Taste 2", value: "Leiser-Taste" },
+							{ name: "Art", value: "Schnell hintereinander" },
+						]}
+					></Setting>
+					
+					<Setting
+						heading="Persönliche Informationen"
+						description="Hier kannst du Informationen angeben, die im Ernstfall nützlich
+						sein könnten, um dich zu finden!"
+						values={[
+							{ name: "Vorname", value: "Max" },
+							{ name: "Nachname", value: "Mustermann" },
+						]}
+					></Setting>
 				</div>
 			</section>
 			<img className="exit-btn" src={exit} alt="Exit Button" />
