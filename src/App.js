@@ -5,8 +5,8 @@ import SettingsScreen from "./components/SettingsScreen";
 
 function App() {
 	return (
-		<SettingsScreen></SettingsScreen>
-		// <LocationScreen></LocationScreen>
+		// <SettingsScreen></SettingsScreen>
+		<LocationScreen></LocationScreen>
 	);
 }
 
