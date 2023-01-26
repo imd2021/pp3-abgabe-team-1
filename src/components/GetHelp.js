@@ -7,7 +7,7 @@ function GetHelp() {
   // state to keep track of the current index of the cards
   const [currentIndex, setCurrentIndex] = useState(0);
   // state to keep track of whether the help text is displayed
-  const [showHelpText, setShowHelpText] = useState(false);
+  const [showHelpText, setShowGetHelpText] = useState(false);
   // state to keep track of whether the section is expanded
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -46,14 +46,14 @@ function GetHelp() {
 
   // function to handle the event when the "Get Help" button is clicked
   const handleGetHelpClick = () => {
-    setShowHelpText(true);
+    setShowGetHelpText(true);
     setIsExpanded(true);
   };
 
   // function to handle the event when the "Back to Home" button is clicked
   const handleBackToHomeClick = () => {
     window.location.reload();
-    setShowHelpText(false);
+    setShowGetHelpText(false);
     setIsExpanded(false);
   };
 
