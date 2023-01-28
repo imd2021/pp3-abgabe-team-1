@@ -1,4 +1,4 @@
-.section-area-gethelp {
+.sectionArea {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,13 +9,17 @@
   transition: all 200ms ease-out;
 }
 
-.section-area-gethelp.expanded {
+#getHelp {
+  background-color: #4caf50;
+}
+
+.sectionArea.expanded {
   height: 100%;
   width: 100%;
   z-index: 1001;
 }
 
-.get-help-text-container {
+.getHelp__textContainer {
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
@@ -24,7 +28,7 @@
   height: 94%;
 }
 
-.get-help-text-container button {
+.getHelp__textContainer button {
   border: none;
   cursor: pointer;
   position: fixed;
@@ -49,47 +53,54 @@
   background-color: #afafaf;
 }
 
-.section-area-gethelp mark {
+.sectionArea mark {
   background-color: #4caf50;
   color: #ffffff;
   padding: 1.2vw;
 }
 
-.section-area-gethelp h1 {
+.sectionArea h1 {
   font-size: 9vw;
   font-weight: 900;
   margin: 7.2vw 5vw 8vw 6vw;
 }
 
-.section-area-gethelp h2 {
+.sectionArea h2 {
   font-size: 5vw;
   font-weight: 500;
   color: #4caf50;
   margin: 2.5vw;
 }
 
-.section-area-gethelp h3 {
+.sectionArea h3 {
   font-size: 3.6vw;
   font-weight: 600;
   color: #4caf50;
   margin-left: 2.5vw;
 }
 
-.section-area-gethelp p {
+.sectionArea p {
   font-size: 3.7vw;
   margin: 2.5vw;
   margin-bottom: 6vw;
   color: #000000;
 }
 
-.section-area-gethelp b {
+.sectionArea ul {
+  font-size: 3.7vw;
+  margin: 2.5vw;
+  margin-bottom: 6vw;
+  color: #000000;
+}
+
+.sectionArea b {
   font-weight: 900;
 }
 
-.section-area-gethelp ul {
+.sectionArea ul {
   padding-left: 5vw;
 }
 
-.section-area-gethelp li {
+.sectionArea li {
   padding-bottom: 3vw;
 }
