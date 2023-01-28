@@ -1,12 +1,12 @@
 import "./fontface.css";
 import "./App.css";
-import LocationScreen from "./components/LocationScreen";
-import SettingsScreen from "./components/SettingsScreen";
+import LocationScreen from "./screens/LocationScreen";
+import SettingsScreen from "./screens/SettingsScreen";
 
 function App() {
 	return (
-		// <SettingsScreen></SettingsScreen>
-		<LocationScreen></LocationScreen>
+		<SettingsScreen></SettingsScreen>
+		// <LocationScreen></LocationScreen>
 	);
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SectionBottom from "./SectionBottom";
-import "./LocationScreen.css";
+import SectionBottom from "../components/SectionBottom";
+import styles from "./LocationScreen.module.css";
 
 import destinationPoint from "../assets/destinationPoint.svg";
 import directionArrow from "../assets/directionArrow.svg";
@@ -17,25 +17,25 @@ const LocationScreen = () => {
 
 	return (
 		<>
-			<section className="section-area" id="location">
+			<section className={styles.sectionArea} id={styles.location}>
 				{helpPending ? (
-					<div className="location-content">
-						<div className="destination">
-							<h2 className="destination__name">Name</h2>
+					<div className={styles.locationContent}>
+						<div className={styles.destination}>
+							<h2 className={styles.destination__name}>Name</h2>
 							<img
-								className="destinationPoint"
+								className={styles.destinationPoint}
 								src={destinationPoint}
 								alt="Destination Point"
 							/>
 						</div>
 
 						<img
-							className="directionArrow"
+							className={styles.directionArrow}
 							src={directionArrow}
 							alt="Direction Arrow"
 						/>
 
-						<div className="destination-info">
+						<div className={styles.destinationInfo}>
 							<h1>
 								<span id="distance">15</span> M
 							</h1>
@@ -45,8 +45,8 @@ const LocationScreen = () => {
 						</div>
 					</div>
 				) : (
-					<div className="empty-content">
-						<div className="empty-info">
+					<div className={styles.emptyContent}>
+						<div className={styles.emptyInfo}>
 							<h1>
 								<span>YUHU!</span>
 							</h1>
@@ -61,13 +61,13 @@ const LocationScreen = () => {
 					</SectionBottom>
 				) : (
 					<SectionBottom color="#FF9D28" handleClick={handleFound}>
-						<img className="section__icon" src={help} alt="Lifebelt" />
+						<img className={styles.section__icon} src={help} alt="Lifebelt" />
 						<p>Lies dir hier durch, wie du helfen kannst!</p>
 					</SectionBottom>
 				)}
 			</section>
 
-			<img className="exit-btn" src={exit} alt="Exit Button" />
+			<img className={styles.exitBtn} src={exit} alt="Exit Button" />
 		</>
 	);
 };

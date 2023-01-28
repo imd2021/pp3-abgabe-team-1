@@ -1,13 +1,13 @@
 import React from "react";
-import "./SettingsScreen.css";
-import Setting from "./Setting";
+import styles from "./SettingsScreen.module.css";
+import Setting from "../components/Setting";
 import exit from "../assets/exit.svg";
 
 const SettingsScreen = () => {
 	return (
 		<>
-			<section className="section-area" id="settings">
-				<div className="settings-container">
+			<section className={styles.sectionArea} id={styles.settings}>
+				<div className={styles.settingsContainer}>
 					<Setting
 						heading="Tasten&shy;kombination"
 						description="Stelle hier deine Tastenkombination ein um schnell einen Hilferuf absenden zu können!"
@@ -29,7 +29,7 @@ const SettingsScreen = () => {
 					></Setting>
 				</div>
 			</section>
-			<img className="exit-btn" src={exit} alt="Exit Button" />
+			<img className={styles.exitBtn} src={exit} alt="Exit Button" />
 		</>
 	);
 };

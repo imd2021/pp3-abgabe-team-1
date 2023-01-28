@@ -1,15 +1,15 @@
 import React from "react";
-import "./SectionBottom.css";
+import styles from "./SectionBottom.module.css";
 
 const SectionBottom = ({ color, children, handleClick }) => {
 	return (
 		<>
 			<section
-				className="section"
+				className={styles.section}
 				style={{ backgroundColor: color, color: color }}
 				onClick={handleClick}
 			>
-				<div className="section__container">
+				<div className= {styles.section__container}>
 					{children}
 				</div>
 			</section>

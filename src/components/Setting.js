@@ -1,18 +1,18 @@
 import React from "react";
-import "./Setting.css"
+import styles from "./Setting.module.css"
 
 const Setting = ({ heading, description, values }) => {
 	return (
-		<article className="setting">
-			<div className="setting__head">
+		<article className={styles.setting}>
+			<div className={styles.setting__head}>
 				<h2>{heading}</h2>
-				<label className="setting__switch">
+				<label className={styles.setting__switch}>
 					<input type="checkbox" />
-					<span className="slider"></span>
+					<span className={styles.slider}></span>
 				</label>
 			</div>
-			<p className="setting__description">{description}</p>
-			<div className="setting__values">
+			<p className={styles.setting__description}>{description}</p>
+			<div className={styles.setting__values}>
 				<p>
 					{values.map((item) => {
 						return (
@@ -24,7 +24,7 @@ const Setting = ({ heading, description, values }) => {
 						);
 					})}
 				</p>
-				<p className="edit">Bearbeiten</p>
+				<p className={styles.edit}>Bearbeiten</p>
 			</div>
 		</article>
 	);
