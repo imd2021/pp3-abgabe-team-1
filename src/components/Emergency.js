@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cross from "../assets/icons/Cross.svg";
-import "./Emergency.css";
+import styles from "./Emergency.module.css";
 
 function Emergency() {
   // state to keep track of whether the text field is shown
@@ -41,26 +41,26 @@ function Emergency() {
 
   return (
     <>
-      <section className="section-area" id="emergency">
+      <section className={styles.sectionArea} id={styles.emergency}>
         {!showTextField && !showFinalText && (
-          <button className="helpButton" onClick={handleTimer}>
+          <button className={styles.helpButton} onClick={handleTimer}>
             HILFE
           </button>
         )}
         {showTextField && !showFinalText && (
           <div>
-            <p className="helpInformation">
+            <p className={styles.helpInformation}>
               HILFERUF WIRD <br></br> IN {countdown} SEKUNDEN ABGESETZT:
             </p>
-            <button className="goBack" onClick={handleGoBack}>
+            <button className={styles.goBack} onClick={handleGoBack}>
               <img src={Cross} alt="Abbrechen" /> Jetzt abbrechen
             </button>
           </div>
         )}
         {showFinalText && (
           <div>
-            <p className="helpInformation">HILFERUF WURDE ABGESETZT</p>
-            <button className="goBack" onClick={handleGoBack}>
+            <p className={styles.helpInformation}>HILFERUF WURDE ABGESETZT</p>
+            <button className={styles.goBack} onClick={handleGoBack}>
               <img src={Cross} alt="Abbrechen" /> Ich benötige keine weitere
               Hilfe
             </button>

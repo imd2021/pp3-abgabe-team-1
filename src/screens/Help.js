@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import HelpIcon from "../assets/icons/Help.svg";
-import "./Help.css";
+import styles from "./Help.module.css";
 
 function Help() {
   // state to keep track of the current index of the cards
@@ -59,14 +59,14 @@ function Help() {
 
   return (
     <section
-      className={`section-area-help ${isExpanded ? "expanded" : ""}`}
-      id="Help"
+      className={isExpanded ? `${styles.sectionArea} ${styles.expanded}` : `${styles.sectionArea}`}
+      id={styles.help}
       onClick={handleHelpClick}
       {...handlers}
     >
       {/* Conditional rendering: if showHelpText is true, display the help text, otherwise, display the stop icon */}
       {showHelpText ? (
-        <div className="help-text-container">
+        <div className={styles.help__textContainer}>
           <button onClick={handleBackToHomeClick}>Back to Home</button>
           <div>
             <h1>{cards[currentIndex].title}</h1>
@@ -74,7 +74,7 @@ function Help() {
           </div>
         </div>
       ) : (
-        <img className="icon" src={HelpIcon} alt="Hilfe erhalten" />
+        <img className={styles.icon} src={HelpIcon} alt="Hilfe erhalten" />
       )}
     </section>
   );

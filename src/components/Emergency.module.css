@@ -1,3 +1,13 @@
+.sectionArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vw;
+  width: 50vw;
+  position: absolute;
+  transition: all 200ms ease-out;
+}
+
 #emergency {
   background-color: #3f3fc2;
   width: 100%;

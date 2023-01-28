@@ -1,28 +1,30 @@
-.section-area-help {
+.sectionArea {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50vw;
   width: 50vw;
-  right: 0;
-  background-color: #ff9d28;
   position: absolute;
   transition: all 200ms ease-out;
 }
+#help {
+  right: 0;
+  background-color: #ff9d28;
+}
 
-.section-area-help.expanded {
+.sectionArea.expanded {
   height: 100%;
   width: 100%;
   z-index: 1001;
 }
 
-.help-text-container {
+.help__textContainer {
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
 }
 
-.help-text-container button {
+.help__textContainer button {
   background-color: #ffffff;
   color: #000000;
   border: none;

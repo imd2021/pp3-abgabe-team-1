@@ -1,15 +1,18 @@
-.section-area-gethelp {
+.sectionArea {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50vw;
   width: 50vw;
-  background-color: #4caf50;
   position: absolute;
   transition: all 200ms ease-out;
 }
 
-.section-area-gethelp.expanded {
+#getHelp {
+  background-color: #4caf50;
+}
+
+.sectionArea.expanded {
   height: 100%;
   width: 100%;
   z-index: 1001;
