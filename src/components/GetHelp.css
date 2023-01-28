@@ -32,8 +32,8 @@
 }
 
 .homeButtonGreen {
-  top: 0rem;
-  right: -0.2rem;
+  top: 1.2vw;
+  right: 0vw;
   background-color: transparent;
 }
 
@@ -56,9 +56,9 @@
 }
 
 .section-area-gethelp h1 {
-  font-size: 7.5vw;
+  font-size: 9vw;
   font-weight: 900;
-  margin: 6.2vw 5vw 8vw 6vw;
+  margin: 7.2vw 5vw 8vw 6vw;
 }
 
 .section-area-gethelp h2 {
@@ -69,14 +69,14 @@
 }
 
 .section-area-gethelp h3 {
-  font-size: 3vw;
+  font-size: 3.6vw;
   font-weight: 600;
   color: #4caf50;
   margin-left: 2.5vw;
 }
 
 .section-area-gethelp p {
-  font-size: 2.8vw;
+  font-size: 3.7vw;
   margin: 2.5vw;
   margin-bottom: 6vw;
   color: #000000;
@@ -84,4 +84,12 @@
 
 .section-area-gethelp b {
   font-weight: 900;
+}
+
+.section-area-gethelp ul {
+  padding-left: 5vw;
+}
+
+.section-area-gethelp li {
+  padding-bottom: 3vw;
 }

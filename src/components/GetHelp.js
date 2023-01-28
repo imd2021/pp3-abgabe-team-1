@@ -75,12 +75,22 @@ function GetHelp() {
             <b>03</b> Tipps für den ÖPNV
           </h2>{" "}
           <p>
-            Setze dich in die Nähe des Fahrers oder in einen Wagen, in dem
-            bereits mehrere Fahrgäste sind Setze dich in der Bahn in den ersten
-            Wagen. Dort kann dir der Fahrer/ die Fahrerin am schnellsten zu
-            Hilfe kommen Schließe dich vertrauenswürdigen Personen an
-            Telefonieren mit einer Freundin/einem Freund Habe dein Handy
-            griffbereit, um Hilfe rufen zu können, wenn es nötig ist
+            <ul>
+              <li>
+                Setze dich in die Nähe des Fahrers oder in einen Wagen, in dem
+                bereits mehrere Fahrgäste sind
+              </li>
+              <li>
+                Setze dich in der Bahn in den ersten Wagen. Dort kann dir der
+                Fahrer/ die Fahrerin am schnellsten zu Hilfe kommen Schließe
+                dich vertrauenswürdigen Personen an
+              </li>
+              <li>Telefonieren mit einer Freundin/einem Freund </li>
+              <li>
+                Habe dein Handy griffbereit, um Hilfe rufen zu können, wenn es
+                nötig ist
+              </li>
+            </ul>
           </p>
         </div>
       ),
