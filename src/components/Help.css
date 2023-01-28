@@ -1,0 +1,88 @@
+.section-area-help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vw;
+  width: 50vw;
+  right: 0;
+  background-color: #ff9d28;
+  position: absolute;
+  transition: all 200ms ease-out;
+}
+
+.section-area-help.expanded {
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+}
+
+.help-text-container {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  width: 90%;
+  height: 94%;
+}
+
+.help-text-container button {
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  margin: 7vw;
+}
+
+.homeButtonOrange {
+  top: 0rem;
+  right: -0.2rem;
+  background-color: transparent;
+}
+
+.prevButton {
+  bottom: 0.5rem;
+  left: 36vw;
+  background-color: #afafaf;
+}
+
+.nextButton {
+  bottom: 0.5rem;
+  right: 36vw;
+  background-color: #afafaf;
+}
+
+.section-area-help mark {
+  background-color: #ff9d28;
+  color: #ffffff;
+  padding: 1.2vw;
+}
+
+.section-area-help h1 {
+  font-size: 7.5vw;
+  font-weight: 900;
+  margin: 6.2vw 5vw 8vw 6vw;
+}
+
+.section-area-help h2 {
+  font-size: 5vw;
+  font-weight: 500;
+  color: #ff9d28;
+  margin: 2.5vw;
+}
+
+.section-area-help h3 {
+  font-size: 3vw;
+  font-weight: 600;
+  color: #ff9d28;
+  margin-left: 2.5vw;
+}
+
+.section-area-help p {
+  font-size: 2.8vw;
+  margin: 2.5vw;
+  margin-bottom: 6vw;
+  color: #000000;
+}
+
+.section-area-help b {
+  font-weight: 900;
+}
