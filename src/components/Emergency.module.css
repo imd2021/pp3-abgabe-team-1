@@ -1,0 +1,41 @@
+.sectionArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vw;
+  width: 50vw;
+  position: absolute;
+  transition: all 200ms ease-out;
+}
+
+#emergency {
+  background-color: #3f3fc2;
+  width: 100%;
+  height: 100%;
+}
+
+.helpButton {
+  font-size: 25vw;
+  padding: 4vw;
+  font-weight: 700;
+  color: #3f3fc2;
+}
+
+.goBack {
+  font-size: 5vw;
+  color: white;
+  background-color: transparent;
+  border: transparent;
+}
+
+.goBack img {
+  width: 6vw;
+}
+
+.helpInformation {
+  font-size: 10vw;
+  color: #3f3fc2;
+  background-color: white;
+  font-weight: 700;
+  width: 90%;
+}
