@@ -1,14 +1,14 @@
 import "./fontface.css";
 import "./App.css";
-import LocationScreen from "./screens/LocationScreen";
-import SettingsScreen from "./screens/SettingsScreen";
+import Location from "./screens/Location";
+import Settings from "./screens/Settings";
 import Home from "./screens/Home"
 
 function App() {
 	return (
 		<Home />
-		// <SettingsScreen />
-		// <LocationScreen />
+		// <Settings />
+		// <Location />
 	);
 }
 

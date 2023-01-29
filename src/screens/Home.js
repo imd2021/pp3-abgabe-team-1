@@ -1,9 +1,8 @@
 import Emergency from "../components/Emergency";
 import GetHelp from "./GetHelp";
 import Help from "./Help";
-import settingsIcon from "../assets/icons/Settings.svg";
-import locationIcon from "../assets/icons/Location.svg";
-import styles from "./Home.module.css";
+import Location from "./Location"
+import Settings from "./Settings"
 
 function Home() {
   const handleClick = (e) => {
@@ -17,12 +16,8 @@ function Home() {
       <Emergency />
       <GetHelp />
       <Help />
-      <section className={styles.sectionArea} id={styles.settings} onClick={handleClick}>
-        <img className={styles.icon} src={settingsIcon} alt="Einstellungen" />
-      </section>
-      <section className={styles.sectionArea} id={styles.location} onClick={handleClick}>
-        <img className={styles.icon} src={locationIcon} alt="Ortung" />
-      </section>
+      <Settings />
+      <Location />
     </>
   );
 }

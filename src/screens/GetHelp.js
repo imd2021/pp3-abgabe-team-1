@@ -8,7 +8,7 @@ function GetHelp() {
 	// state to keep track of the current index of the cards
 	const [currentIndex, setCurrentIndex] = useState(0);
 	// state to keep track of whether the help text is displayed
-	const [showHelpText, setShowGetHelpText] = useState(false);
+	const [showContent, setShowContent] = useState(false);
 	// state to keep track of whether the section is expanded
 	const [isExpanded, setIsExpanded] = useState(false);
 
@@ -19,7 +19,7 @@ function GetHelp() {
 			title: (
 				<h1>
 					<mark>
-						ICH WERDE <br />
+						ICH WERDE&nbsp;<br />
 						&nbsp;BELÄSTIGT!
 					</mark>
 				</h1>
@@ -55,7 +55,7 @@ function GetHelp() {
 			title: (
 				<h1>
 					<mark>
-						ICH WERDE <br />
+						ICH WERDE&nbsp;<br />
 						&nbsp;BELÄSTIGT!
 					</mark>
 				</h1>
@@ -122,14 +122,14 @@ function GetHelp() {
 
 	// function to handle the event when the "Get Help" button is clicked
 	const handleGetHelpClick = () => {
-		setShowGetHelpText(true);
 		setIsExpanded(true);
+		setTimeout(() => setShowContent(true), 225);
 	};
 
 	// function to handle the event when the "Back to Home" button is clicked
 	const handleBackToHomeClick = () => {
 		window.location.reload();
-		setShowGetHelpText(false);
+		setShowContent(false);
 		setIsExpanded(false);
 	};
 
@@ -144,8 +144,8 @@ function GetHelp() {
 			onClick={handleGetHelpClick}
 			{...handlers}
 		>
-			{/* Conditional rendering: if showHelpText is true, display the help text, otherwise, display the stop icon */}
-			{showHelpText ? (
+			{/* Conditional rendering: if showContent is true, display the help text, otherwise, display the stop icon */}
+			{showContent ? (
 				<div className={styles.getHelp__textContainer}>
 					<button
 						className={styles.homeButtonGreen}
