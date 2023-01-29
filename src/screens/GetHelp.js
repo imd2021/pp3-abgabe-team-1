@@ -19,7 +19,8 @@ function GetHelp() {
 			title: (
 				<h1>
 					<mark>
-						ICH WERDE&nbsp;<br />
+						ICH WERDE&nbsp;
+						<br />
 						&nbsp;BELÄSTIGT!
 					</mark>
 				</h1>
@@ -55,7 +56,8 @@ function GetHelp() {
 			title: (
 				<h1>
 					<mark>
-						ICH WERDE&nbsp;<br />
+						ICH WERDE&nbsp;
+						<br />
 						&nbsp;BELÄSTIGT!
 					</mark>
 				</h1>
@@ -128,7 +130,6 @@ function GetHelp() {
 
 	// function to handle the event when the "Back to Home" button is clicked
 	const handleBackToHomeClick = () => {
-		window.location.reload();
 		setShowContent(false);
 		setIsExpanded(false);
 	};
@@ -141,7 +142,6 @@ function GetHelp() {
 					: `${styles.sectionArea}`
 			}
 			id={styles.getHelp}
-			onClick={handleGetHelpClick}
 			{...handlers}
 		>
 			{/* Conditional rendering: if showContent is true, display the help text, otherwise, display the stop icon */}
@@ -167,7 +167,12 @@ function GetHelp() {
 					</div>
 				</div>
 			) : (
-				<img className={styles.icon} src={stopIcon} alt="Hilfe erhalten" />
+				<img
+					className={styles.icon}
+					src={stopIcon}
+					alt="Hilfe erhalten"
+					onClick={handleGetHelpClick}
+				/>
 			)}
 		</section>
 	);

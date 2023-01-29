@@ -132,7 +132,6 @@ function Help() {
 
 	// function to handle the event when the "Back to Home" button is clicked
 	const handleBackToHomeClick = () => {
-		window.location.reload();
 		setShowContent(false);
 		setIsExpanded(false);
 	};
@@ -145,7 +144,6 @@ function Help() {
 					: `${styles.sectionArea}`
 			}
 			id={styles.help}
-			onClick={handleHelpClick}
 			{...handlers}
 		>
 			{/* Conditional rendering: if showContent is true, display the help text, otherwise, display the stop icon */}
@@ -171,7 +169,12 @@ function Help() {
 					</div>
 				</div>
 			) : (
-				<img className={styles.icon} src={HelpIcon} alt="Hilfe erhalten" />
+				<img
+					className={styles.icon}
+					src={HelpIcon}
+					alt="Hilfe erhalten"
+					onClick={handleHelpClick}
+				/>
 			)}
 		</section>
 	);

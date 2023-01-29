@@ -15,6 +15,7 @@
 	bottom: 0;
 	right: 0;
   transition: all 175ms ease-out;
+	z-index: 99;
 }
 .icon {
 	width: 60%;
@@ -23,7 +24,7 @@
 .sectionArea.expanded {
   height: 100%;
   width: 100%;
-  z-index: 1001;
+  z-index: 999;
 }
 
 h2 {

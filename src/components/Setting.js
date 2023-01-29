@@ -16,11 +16,11 @@ const Setting = ({ heading, description, values }) => {
 				<p>
 					{values.map((item) => {
 						return (
-							<>
+							<span key={item.name}>
 								<b>{`${item.name}: `}</b>
 								{item.value}
 								<br />
-							</>
+							</span>
 						);
 					})}
 				</p>

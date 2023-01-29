@@ -16,7 +16,6 @@ const Settings = () => {
 	};
 
 	const handleBackToHomeClick = () => {
-		window.location.reload();
 		setShowContent(false);
 		setIsExpanded(false);
 	};
@@ -29,40 +28,47 @@ const Settings = () => {
 					: `${styles.sectionArea}`
 			}
 			id={styles.settings}
-			onClick={handleSettingsClick}
 		>
 			{showContent ? (
-					<div>
-						<div className={styles.settingsContainer}>
-							<Setting
-								heading="Tasten&shy;kombination"
-								description="Stelle hier deine Tastenkombination ein um schnell einen Hilferuf absenden zu können!"
-								values={[
-									{ name: "Taste 1", value: "Leiser-Taste" },
-									{ name: "Taste 2", value: "Leiser-Taste" },
-									{ name: "Art", value: "Schnell hintereinander" },
-								]}
-							></Setting>
+				<div>
+					<div className={styles.settingsContainer}>
+						<Setting
+							heading="Tasten&shy;kombination"
+							description="Stelle hier deine Tastenkombination ein um schnell einen Hilferuf absenden zu können!"
+							values={[
+								{ name: "Taste 1", value: "Leiser-Taste" },
+								{ name: "Taste 2", value: "Leiser-Taste" },
+								{ name: "Art", value: "Schnell hintereinander" },
+							]}
+						></Setting>
 
-							<Setting
-								heading="Persönliche Informationen"
-								description="Hier kannst du Informationen angeben, die im Ernstfall nützlich
+						<Setting
+							heading="Persönliche Informationen"
+							description="Hier kannst du Informationen angeben, die im Ernstfall nützlich
 										sein könnten, um dich zu finden!"
-								values={[
-									{ name: "Vorname", value: "Max" },
-									{ name: "Nachname", value: "Mustermann" },
-								]}
-							></Setting>
-						</div>
-						<img className={styles.exitBtn} src={exit} alt="Exit Button" onClick={handleBackToHomeClick}/>
+							values={[
+								{ name: "Vorname", value: "Max" },
+								{ name: "Nachname", value: "Mustermann" },
+							]}
+						></Setting>
 					</div>
-				) : (
-					<img className={styles.icon} src={SettingsIcon} alt="Settings" />
-				)}
+					<img
+						className={styles.exitBtn}
+						src={exit}
+						alt="Exit Button"
+						onClick={handleBackToHomeClick}
+					/>
+				</div>
+			) : (
+				<img
+					className={styles.icon}
+					src={SettingsIcon}
+					alt="Settings"
+					onClick={handleSettingsClick}
+				/>
+			)}
 		</section>
 	);
 };
 
 export default Settings;
-
-

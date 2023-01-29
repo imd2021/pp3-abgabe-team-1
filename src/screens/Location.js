@@ -26,7 +26,6 @@ const Location = () => {
 	};
 
 	const handleBackToHomeClick = () => {
-		window.location.reload();
 		setShowContent(false);
 		setIsExpanded(false);
 	};
@@ -40,7 +39,6 @@ const Location = () => {
 						: `${styles.sectionArea}`
 				}
 				id={styles.location}
-				onClick={handleLocationClick}
 			>
 				{showContent ? (
 					<div>
@@ -95,10 +93,20 @@ const Location = () => {
 								<p>Lies dir hier durch, wie du helfen kannst!</p>
 							</SectionBottom>
 						)}
-						<img className={styles.exitBtn} src={exit} alt="Exit Button" onClick={handleBackToHomeClick}/>
+						<img
+							className={styles.exitBtn}
+							src={exit}
+							alt="Exit Button"
+							onClick={handleBackToHomeClick}
+						/>
 					</div>
 				) : (
-					<img className={styles.icon} src={LocationIcon} alt="Ortung" />
+					<img
+						className={styles.icon}
+						src={LocationIcon}
+						alt="Ortung"
+						onClick={handleLocationClick}
+					/>
 				)}
 			</section>
 		</>
