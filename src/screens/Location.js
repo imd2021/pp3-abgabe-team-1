@@ -41,7 +41,7 @@ const Location = () => {
 				id={styles.location}
 			>
 				{showContent ? (
-					<div>
+					<>
 						{helpPending ? (
 							<div className={styles.locationContent}>
 								<div className={styles.destination}>
@@ -99,7 +99,7 @@ const Location = () => {
 							alt="Exit Button"
 							onClick={handleBackToHomeClick}
 						/>
-					</div>
+					</>
 				) : (
 					<img
 						className={styles.icon}
