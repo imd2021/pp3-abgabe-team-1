@@ -1,0 +1,109 @@
+.sectionArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vw;
+  width: 50vw;
+  background-color: #4caf50;
+  position: absolute;
+  transition: all 175ms ease-out;
+	z-index: 99;
+}
+
+.icon {
+	width: 60%;
+}
+
+
+.sectionArea.expanded {
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+.getHelp__textContainer {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  width: 90%;
+  height: 94%;
+}
+
+.getHelp__textContainer button {
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  margin: 7vw;
+}
+
+.homeButtonGreen {
+  top: 1.2vw;
+  right: 0vw;
+  background-color: transparent;
+}
+
+.prevButton {
+  bottom: 0.5rem;
+  left: 36vw;
+  background-color: #afafaf;
+}
+
+.nextButton {
+  bottom: 0.5rem;
+  right: 36vw;
+  background-color: #afafaf;
+}
+
+.sectionArea mark {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 1.2vw;
+}
+
+.sectionArea h1 {
+	text-align: left;
+  font-size: 9vw;
+  font-weight: 900;
+  margin: 7.2vw 5vw 8vw 6vw;
+}
+
+.sectionArea h2 {
+  font-size: 5vw;
+  font-weight: 500;
+  color: #4caf50;
+  margin: 2.5vw;
+}
+
+.sectionArea h3 {
+  font-size: 3.6vw;
+  font-weight: 600;
+  color: #4caf50;
+  margin-left: 2.5vw;
+}
+
+.sectionArea p {
+  font-size: 3.5vw;
+  margin: 2.5vw;
+  margin-bottom: 6vw;
+  color: #000000;
+	line-height: 115%;
+}
+
+.sectionArea b {
+	font-weight: 900;
+}
+
+.sectionArea ul {
+	font-size: 3.5vw;
+	margin: 2.5vw;
+	margin-bottom: 6vw;
+	color: #000000;
+	padding-left: 5vw;
+	line-height: 115%;
+}
+
+.sectionArea li {
+  padding-bottom: 3vw;
+	font-weight: 500;
+}
