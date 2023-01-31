@@ -4,14 +4,14 @@ import Help from "./Help";
 import Location from "./Location";
 import Settings from "./Settings";
 
-function Home() {
+function Home({calls}) {
 	return (
 		<>
 			<Emergency />
 			<GetHelp />
 			<Help />
 			<Settings />
-			<Location/>
+			<Location calls={calls}/>
 		</>
 	);
 }

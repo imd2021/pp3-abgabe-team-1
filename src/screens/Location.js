@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import SectionBottom from "../components/SectionBottom";
 import styles from "./Location.module.css";
 import LocationIcon from "../assets/icons/Location.svg";
@@ -7,7 +7,7 @@ import directionArrow from "../assets/directionArrow.svg";
 import exit from "../assets/exit.svg";
 import help from "../assets/help.svg";
 
-const Location = () => {
+const Location = ({ calls }) => {
 	// state to keep track of whether the help text is displayed
 	const [showContent, setShowContent] = useState(false);
 	// state to keep track of whether the section is expanded
@@ -42,7 +42,7 @@ const Location = () => {
 			>
 				{showContent ? (
 					<>
-						{helpPending ? (
+						{calls.length > 0 ? (
 							<div className={styles.locationContent}>
 								<div className={styles.destination}>
 									<h2 className={styles.destination__name}>Name</h2>
@@ -79,12 +79,12 @@ const Location = () => {
 							</div>
 						)}
 
-						{helpPending ? (
+						{calls.length > 0 ? (
 							<SectionBottom color="#3F3FC2" handleClick={handleFound}>
 								<h1>GEFUNDEN!</h1>
 							</SectionBottom>
 						) : (
-							<SectionBottom color="#FF9D28" handleClick={handleFound}>
+							<SectionBottom color="#FF9D28">
 								<img
 									className={styles.section__icon}
 									src={help}

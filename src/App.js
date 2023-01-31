@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 import "./fontface.css";
 import "./App.css";
 import Home from "./screens/Home";
@@ -16,6 +16,7 @@ import {
 	query,
 	onSnapshot,
 } from "firebase/firestore";
+import { create } from "domain";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyCLcw8uUMz5lzkW-y7TCspNHdvY-gB6yC4",
@@ -32,7 +33,7 @@ const db = getFirestore(app);
 const emergenciesRef = collection(db, "emergencies");
 
 function App() {
-	const [calls, setCalls] = useState([1]);
+	const [calls, setCalls] = useState([]);
 
 	useEffect(() => {
 		const unsubscribe = onSnapshot(emergenciesRef, (snapshot) => {
@@ -50,12 +51,14 @@ function App() {
 		};
 	}, []);
 
-	// locks app into portrait mode
-	useEffect(() => {
-		ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
-	}, []);
+	// // locks app into portrait mode
+	// useEffect(() => {
+	// 	ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
+	// }, []);
 
-	return calls.length > 0 ? <Home/> : <div>BLA</div>;
+	return (
+			<Home calls={calls}/>
+	);
 }
 
 export default App;
