@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useState } from "react";
 import SectionBottom from "../components/SectionBottom";
 import styles from "./Location.module.css";
 import LocationIcon from "../assets/icons/Location.svg";

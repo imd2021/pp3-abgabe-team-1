@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {
 	getFirestore,
-	collection,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -16,6 +15,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const emergenciesRef = collection(db, "emergencies");
 
-export default emergenciesRef;
+export default db;

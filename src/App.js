@@ -4,14 +4,15 @@ import "./App.css";
 import Home from "./screens/Home";
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
 
-import { onSnapshot } from "firebase/firestore";
-import emergenciesRef from "./firebaseConfig";
+import { collection, onSnapshot } from "firebase/firestore";
+import db from "./firebaseConfig";
 
 function App() {
 	const [calls, setCalls] = useState([]);
 
 	// lists all emergency calls from the db collection if it changes
 	useEffect(() => {
+		const emergenciesRef = collection(db, "emergencies");
 		const unsubscribe = onSnapshot(emergenciesRef, (snapshot) => {
 			setCalls(
 				snapshot.docs.map((doc) => ({
