@@ -38,7 +38,7 @@ function Help() {
 						<b>02</b> Gehe zu der Person
 					</h2>
 					<p>
-						Gehe zu der Person, welche Hilfe benötigt. Wenn du über APPNAME
+						Gehe zu der Person, welche Hilfe benötigt. Wenn du über BOB
 						einen Hilferuf von einer Person erhalten hast, kannst du diese über
 						“Person auffinden” orten. Folge dabei einfach dem Pfeil auf deinem
 						Display.
