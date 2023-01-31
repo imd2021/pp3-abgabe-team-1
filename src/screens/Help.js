@@ -4,13 +4,11 @@ import CrossIcon from "../assets/icons/Cross_orange.svg";
 import HelpIcon from "../assets/icons/Help.svg";
 import styles from "./Help.module.css";
 
-function Help() {
+function Help({expanded, setExpanded, content, setContent}) {
 	// state to keep track of the current index of the cards
 	const [currentIndex, setCurrentIndex] = useState(0);
-	// state to keep track of whether the help text is displayed
-	const [showContent, setShowContent] = useState(false);
-	// state to keep track of whether the section is expanded
-	const [isExpanded, setIsExpanded] = useState(false);
+	// // state to keep track of whether the help text is displayed
+	// const [showContent, setShowContent] = useState(false);
 
 	// array of cards to display home
 	const cards = [
@@ -126,20 +124,20 @@ function Help() {
 
 	// function to handle the event when the "Get Help" button is clicked
 	const handleHelpClick = () => {
-		setIsExpanded(true);
-		setTimeout(() => setShowContent(true), 225);
+		setExpanded(true);
+		setTimeout(() => setContent(true), 225);
 	};
 
 	// function to handle the event when the "Back to Home" button is clicked
 	const handleBackToHomeClick = () => {
-		setShowContent(false);
-		setIsExpanded(false);
+		setContent(false);
+		setExpanded(false);
 	};
 
 	return (
 		<section
 			className={
-				isExpanded
+				expanded
 					? `${styles.sectionArea} ${styles.expanded}`
 					: `${styles.sectionArea}`
 			}
@@ -147,7 +145,7 @@ function Help() {
 			{...handlers}
 		>
 			{/* Conditional rendering: if showContent is true, display the help text, otherwise, display the stop icon */}
-			{showContent ? (
+			{content ? (
 				<div className={styles.help__textContainer}>
 					<button
 						className={styles.homeButtonOrange}

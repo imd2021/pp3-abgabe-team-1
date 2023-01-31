@@ -31,10 +31,14 @@
 }
 
 .goBack {
+	margin-left: 10px;
+	margin-top: 5px;
+	display: flex;
   font-size: 5vw;
   color: white;
   background-color: transparent;
   border: transparent;
+	align-items: center;
 }
 
 .goBack img {

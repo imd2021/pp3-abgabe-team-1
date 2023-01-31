@@ -7,7 +7,7 @@ import directionArrow from "../assets/directionArrow.svg";
 import exit from "../assets/exit.svg";
 import help from "../assets/help.svg";
 
-const Location = ({ calls }) => {
+const Location = ({ calls, openHelp }) => {
 	// state to keep track of whether the help text is displayed
 	const [showContent, setShowContent] = useState(false);
 	// state to keep track of whether the section is expanded
@@ -16,7 +16,7 @@ const Location = ({ calls }) => {
 	const [helpPending, setHelpPending] = useState(false);
 
 	const handleFound = () => {
-		setHelpPending(!helpPending);
+		setHelpPending(false);
 		console.log(helpPending);
 	};
 
@@ -84,7 +84,13 @@ const Location = ({ calls }) => {
 								<h1>GEFUNDEN!</h1>
 							</SectionBottom>
 						) : (
-							<SectionBottom color="#FF9D28">
+							<SectionBottom
+								color="#FF9D28"
+								handleClick={() => {
+									openHelp();
+									handleBackToHomeClick();
+								}}
+							>
 								<img
 									className={styles.section__icon}
 									src={help}
