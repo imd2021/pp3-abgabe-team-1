@@ -11,7 +11,7 @@ Um die App zum laufen zu bringen, bitte folgende Schritte befolgen:
 
 5. Die App für Android bauen mit `ionic cap build android` (Daraufhin sollte sich Android Studio mit dem Projekt öffnen.)
 
-6. App icons in das Android Projekt übertragen mit `npx cordova-res` im root-Ordner
+6. App icons in das Android Projekt übertragen mit `npx cordova-res --skip-config --copy` im root-Ordner
 
 7. Ein Android Handy per USB mit dem PC verbinden und in Android Studio auswählen </br>
 <img src="https://i.stack.imgur.com/Cc4Zi.jpg" width="350px">

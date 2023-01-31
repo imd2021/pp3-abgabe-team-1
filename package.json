@@ -26,6 +26,7 @@
     "cordova-plugin-screen-orientation": "^3.0.2",
     "cordova-res": "^0.15.4",
     "es6-promise-plugin": "^4.2.2",
+    "firebase": "^9.16.0",
     "history": "^4.9.0",
     "ionicons": "^6.0.3",
     "react": "^18.2.0",
