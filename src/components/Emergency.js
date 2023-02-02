@@ -1,10 +1,17 @@
 import { useState } from "react";
 import Cross from "../assets/icons/Cross.svg";
 import styles from "./Emergency.module.css";
-
-import { setDoc, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
+import {
+	setDoc,
+	deleteDoc,
+	doc,
+	serverTimestamp,
+	collection,
+} from "firebase/firestore";
 import db from "../firebaseConfig";
 import { uuidv4 } from "@firebase/util";
+import storage from "../storage";
+import { Geolocation } from "@capacitor/geolocation";
 
 function Emergency() {
 	// state to keep track of whether the text field is shown
@@ -18,19 +25,29 @@ function Emergency() {
 	// stores the unique id of the emergency call that is currently pending
 	const [callId, setCallId] = useState("");
 
+	const currentPosition = async () => {
+		const response = await Geolocation.getCurrentPosition();
+		const coords = {
+			lat: response.coords.latitude,
+			lon: response.coords.longitude,
+		};
+		return coords;
+	};
+
 	const sendCall = async () => {
 		const id = uuidv4();
 		setCallId(id);
 		await setDoc(doc(db, "emergencies", id), {
-			deviceID: "1",
-			name: "Max Mustermann",
+			deviceID: await storage.get("deviceID"),
+			name: await storage.get("name"),
 			createdAt: serverTimestamp(),
-			pos: { x: 5, y: 2 },
+			pos: await currentPosition(),
 		});
 	};
 
 	const deleteCall = async () => {
-		const docRef = doc(db, "emergencies", callId);
+		const emergenciesRef = collection(db, "emergencies");
+		const docRef = doc(emergenciesRef, callId);
 		await deleteDoc(docRef);
 	};
 
