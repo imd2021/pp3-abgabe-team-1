@@ -26,7 +26,9 @@ function Emergency() {
 	const [callId, setCallId] = useState("");
 
 	const currentPosition = async () => {
-		const response = await Geolocation.getCurrentPosition();
+		const response = await Geolocation.getCurrentPosition({
+			enableHighAccuracy: true,
+		});
 		const coords = {
 			lat: response.coords.latitude,
 			lon: response.coords.longitude,

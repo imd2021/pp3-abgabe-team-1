@@ -4,7 +4,6 @@ import "./App.css";
 import Home from "./screens/Home";
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
 import { collection, onSnapshot } from "firebase/firestore";
-import { uuidv4 } from "@firebase/util";
 import db from "./firebaseConfig";
 import { LocalNotifications } from "@capacitor/local-notifications";
 import storage from "./storage";
@@ -43,7 +42,6 @@ function App() {
 				snapshot.docs.length > 0 &&
 				snapshot.docs[0].data().deviceID !== deviceID
 			) {
-				console.log("send notification");
 				scheduleNotification();
 			}
 		});

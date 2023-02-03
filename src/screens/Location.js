@@ -17,19 +17,41 @@ const Location = ({ calls, openHelp }) => {
 	// state to keep track of whether the section is expanded
 	const [isExpanded, setIsExpanded] = useState(false);
 	// GPS coordinates of the device
-	const [coordinates, setCoordiantes] = useState({ lat: 49, lon: 7.999 });
+	const [coordinates, setCoordiantes] = useState({ lat: 0, lon: 0 });
+
+	const [watchingPosition, setWatchingPosition] = useState(false);
 
 	useEffect(() => {
-		getCurrentPosition();
-	}, []);
+		if (
+			watchingPosition &&
+			calls.length > 0 &&
+			calls[0].deviceID !== deviceID
+		) {
+			getCurrentPosition();
+		}
+		const intervalID = setInterval(() => {
+			if (
+				watchingPosition &&
+				calls.length > 0 &&
+				calls[0].deviceID !== deviceID
+			) {
+				getCurrentPosition();
+			}
+		}, 2500);
+
+		return () => clearInterval(intervalID);
+	}, [watchingPosition]);
 
 	const getCurrentPosition = async () => {
-		const response = await Geolocation.getCurrentPosition();
+		const response = await Geolocation.getCurrentPosition({
+			enableHighAccuracy: true,
+		});
 		const coords = {
 			lat: response.coords.latitude,
 			lon: response.coords.longitude,
 		};
 		setCoordiantes(coords);
+		console.log(coords);
 	};
 
 	// math from http://www.movable-type.co.uk/scripts/gis-faq-5.1.html
@@ -55,12 +77,14 @@ const Location = ({ calls, openHelp }) => {
 
 	const handleLocationClick = () => {
 		setIsExpanded(true);
+		setWatchingPosition(true);
 		setTimeout(() => setShowContent(true), 225);
 	};
 
 	const handleBackToHomeClick = () => {
 		setShowContent(false);
 		setIsExpanded(false);
+		setWatchingPosition(false);
 	};
 
 	return (
@@ -110,8 +134,8 @@ const Location = ({ calls, openHelp }) => {
 													calls[0].pos.lon,
 													coordinates.lat,
 													coordinates.lon
-												)
-											)}
+												) * 10
+											) / 10}
 										</span>{" "}
 										M
 									</h1>
