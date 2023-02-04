@@ -41,7 +41,8 @@ function Emergency() {
 		setCallId(id);
 		await setDoc(doc(db, "emergencies", id), {
 			deviceID: await storage.get("deviceID"),
-			name: await storage.get("name"),
+			firstname: await storage.get("firstname"),
+			lastname: await storage.get("lastname"),
 			createdAt: serverTimestamp(),
 			pos: await currentPosition(),
 		});
@@ -94,8 +95,8 @@ function Emergency() {
 					<div>
 						<p className={styles.helpInformation}>
 							<mark>
-								&nbsp;HILFERUF WIRD&nbsp;<br></br>&nbsp;IN {countdown}{" "}
-								SEKUNDEN&nbsp;<br></br>&nbsp;ABGESETZT:&nbsp;
+								&nbsp;HILFERUF WIRD&nbsp;<br />&nbsp;IN {countdown}{" "}
+								SEKUNDEN&nbsp;<br />&nbsp;ABGESETZT:&nbsp;
 							</mark>
 						</p>
 						<button className={styles.goBack} onClick={handleGoBack}>
@@ -107,7 +108,7 @@ function Emergency() {
 					<div>
 						<p className={styles.helpInformation}>
 							<mark>
-								&nbsp;HILFERUF WURDE&nbsp;<br></br>&nbsp;ABGESETZT&nbsp;
+								&nbsp;HILFERUF WURDE&nbsp;<br />&nbsp;ABGESETZT&nbsp;
 							</mark>
 						</p>
 						<button className={styles.goBack} onClick={handleGoBack}>

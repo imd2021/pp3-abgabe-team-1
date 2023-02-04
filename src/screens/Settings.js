@@ -33,22 +33,24 @@ const Settings = () => {
 				<div>
 					<div className={styles.settingsContainer}>
 						<Setting
+							id="personalInfo"
+							heading="Persönliche Informationen"
+							description="Hier kannst du Informationen angeben, die im Ernstfall nützlich
+										sein könnten, um dich zu finden!"
+							values={[
+								{id: "firstname", name: "Vorname", value: "Max" },
+								{id: "lastname", name: "Nachname", value: "Mustermann" },
+							]}
+						></Setting>
+
+						<Setting
+							id="shortcut"
 							heading="Tasten&shy;kombination"
 							description="Stelle hier deine Tastenkombination ein um schnell einen Hilferuf absenden zu können!"
 							values={[
 								{ name: "Taste 1", value: "Leiser-Taste" },
 								{ name: "Taste 2", value: "Leiser-Taste" },
 								{ name: "Art", value: "Schnell hintereinander" },
-							]}
-						></Setting>
-
-						<Setting
-							heading="Persönliche Informationen"
-							description="Hier kannst du Informationen angeben, die im Ernstfall nützlich
-										sein könnten, um dich zu finden!"
-							values={[
-								{ name: "Vorname", value: "Max" },
-								{ name: "Nachname", value: "Mustermann" },
 							]}
 						></Setting>
 					</div>

@@ -111,7 +111,7 @@ const Location = ({ calls, openHelp }) => {
 						) : (
 							<div className={styles.locationContent}>
 								<div className={styles.destination}>
-									<h2 className={styles.destination__name}>{calls[0].name}</h2>
+									<h2 className={styles.destination__name}>{calls[0].firstname}</h2>
 									<img
 										className={styles.destinationPoint}
 										src={destinationPoint}

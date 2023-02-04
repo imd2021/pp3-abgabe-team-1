@@ -18,8 +18,8 @@ function App() {
 			notifications: [
 				{
 					id: 1,
-					title: "New Call For Help",
-					body: "There is someone who needs your help!",
+					title: "Jemand braucht deine Hilfe!",
+					body: "Öffne die Richtungsanzeige in der App, um zu sehen, wo sich die Person befindet.",
 				},
 			],
 		});
@@ -34,7 +34,8 @@ function App() {
 					id: doc.id,
 					deviceID: doc.data().deviceID,
 					pos: doc.data().pos,
-					name: doc.data().name,
+					firstname: doc.data().firstname,
+					lastname: doc.data().lastname,
 				}))
 			);
 
