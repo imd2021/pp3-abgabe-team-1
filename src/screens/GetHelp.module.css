@@ -83,11 +83,11 @@
 }
 
 .sectionArea p {
-  font-size: 3.5vw;
+  font-size: 3.6vw;
   margin: 2.5vw;
   margin-bottom: 6vw;
   color: #000000;
-	line-height: 115%;
+	line-height: 120%;
 }
 
 .sectionArea b {
@@ -95,12 +95,12 @@
 }
 
 .sectionArea ul {
-	font-size: 3.5vw;
+	font-size: 3.6vw;
 	margin: 2.5vw;
 	margin-bottom: 6vw;
 	color: #000000;
 	padding-left: 5vw;
-	line-height: 115%;
+	line-height: 120%;
 }
 
 .sectionArea li {

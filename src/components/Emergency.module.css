@@ -1,3 +1,5 @@
+
+
 .sectionArea {
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@
 
 .goBack {
 	margin-left: 10px;
-	margin-top: 5px;
+	margin-top: 20px;
 	display: flex;
   font-size: 5vw;
   color: white;
@@ -43,12 +45,18 @@
 
 .goBack img {
   width: 6vw;
+	margin-right: 6px;
 }
 
 .helpInformation {
   font-size: 10vw;
   color: #3f3fc2;
-  background-color: white;
+  background-color: transparent;
   font-weight: 700;
-  width: 90%;
+  width: 95%;
+	line-height: 120%;
+}
+.helpInformation mark {
+	color: #3f3fc2;
+	background-color: white;
 }

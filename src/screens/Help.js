@@ -50,7 +50,7 @@ function Help({expanded, setExpanded, content, setContent}) {
 						ein Gespräch beginnen. Setze dich zu ihr oder frage sie, ob sie sich
 						mit zu dir setzen möchte.
 					</p>
-					<h3>Lese auf der nächsten Seite weiter.</h3>
+					<h3>Lies auf der nächsten Seite weiter.</h3>
 				</div>
 			),
 		},

@@ -48,7 +48,7 @@ function GetHelp() {
 						Hilferuf der App wird NICHT die Polizei informiert. Solltest du
 						Hilfe von der Polizei benötigen, wähle die Nummer 110.
 					</p>
-					<h3>Lese auf der nächsten Seite weiter.</h3>
+					<h3>Lies auf der nächsten Seite weiter.</h3>
 				</div>
 			),
 		},

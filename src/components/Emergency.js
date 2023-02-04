@@ -93,7 +93,10 @@ function Emergency() {
 				{showTextField && !showFinalText && (
 					<div>
 						<p className={styles.helpInformation}>
-							HILFERUF WIRD <br></br> IN {countdown} SEKUNDEN ABGESETZT:
+							<mark>
+								&nbsp;HILFERUF WIRD&nbsp;<br></br>&nbsp;IN {countdown}{" "}
+								SEKUNDEN&nbsp;<br></br>&nbsp;ABGESETZT:&nbsp;
+							</mark>
 						</p>
 						<button className={styles.goBack} onClick={handleGoBack}>
 							<img src={Cross} alt="Abbrechen" /> Jetzt abbrechen
@@ -102,7 +105,11 @@ function Emergency() {
 				)}
 				{showFinalText && (
 					<div>
-						<p className={styles.helpInformation}>HILFERUF WURDE ABGESETZT</p>
+						<p className={styles.helpInformation}>
+							<mark>
+								&nbsp;HILFERUF WURDE&nbsp;<br></br>&nbsp;ABGESETZT&nbsp;
+							</mark>
+						</p>
 						<button className={styles.goBack} onClick={handleGoBack}>
 							<img src={Cross} alt="Abbrechen" /> Ich benötige keine weitere
 							Hilfe
