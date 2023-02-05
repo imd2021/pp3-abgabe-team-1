@@ -46,7 +46,7 @@ const Settings = () => {
 						<Setting
 							id="shortcut"
 							heading="Tasten&shy;kombination"
-							description="Stelle hier deine Tastenkombination ein um schnell einen Hilferuf absenden zu können!"
+							description="Stelle hier deine Tastenkombination ein, um schnell einen Hilferuf absenden zu können!"
 							values={[
 								{ name: "Taste 1", value: "Leiser-Taste" },
 								{ name: "Taste 2", value: "Leiser-Taste" },
