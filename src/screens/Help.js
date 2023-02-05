@@ -162,11 +162,7 @@ function Help({ expanded, setExpanded, content, setContent }) {
 									? `${styles.navBtn} ${styles.navBtnActive}`
 									: `${styles.navBtn}`
 							}
-							onClick={() => {
-								if (currentIndex !== 0) {
-									prevCard();
-								}
-							}}
+							onClick={() => setCurrentIndex(0)}
 						></div>
 						<div
 							className={
@@ -174,11 +170,7 @@ function Help({ expanded, setExpanded, content, setContent }) {
 									? `${styles.navBtn} ${styles.navBtnActive}`
 									: `${styles.navBtn}`
 							}
-							onClick={() => {
-								if (currentIndex !== 1) {
-									nextCard();
-								}
-							}}
+							onClick={() => setCurrentIndex(1)}
 						></div>
 					</nav>
 				</div>
