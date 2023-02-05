@@ -15,11 +15,9 @@ function Help({ expanded, setExpanded, content, setContent }) {
 		{
 			title: (
 				<h1>
-					<mark className="markOrange">
-						SO KANNST&nbsp;
-						<br />
-						&nbsp;DU HELFEN
-					</mark>
+					<mark>&nbsp;SO KANNST&nbsp;</mark>
+					<br />
+					<mark>&nbsp;DU HELFEN&nbsp;</mark>
 				</h1>
 			),
 			content: (
@@ -57,11 +55,9 @@ function Help({ expanded, setExpanded, content, setContent }) {
 		{
 			title: (
 				<h1>
-					<mark>
-						SO KANNST&nbsp;
-						<br />
-						&nbsp;DU HELFEN
-					</mark>
+					<mark>&nbsp;SO KANNST&nbsp;</mark>
+					<br />
+					<mark>&nbsp;DU HELFEN&nbsp;</mark>
 				</h1>
 			),
 			content: (

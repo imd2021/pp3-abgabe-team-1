@@ -10,6 +10,7 @@ const Setting = ({ id, heading, description, values }) => {
 	useEffect(() => {
 		const initSetting = async () => {
 			const enabled = await storage.get(id);
+			console.log(await storage.get(id));
 
 			// get personal info from storage
 			const storedFirstname = await storage.get("firstname");
@@ -29,10 +30,8 @@ const Setting = ({ id, heading, description, values }) => {
 			}
 			// set inputs.disabled to stored value
 			const inputs = document.querySelectorAll(".setting__input");
-			inputs.forEach((elem) => {
-				elem.disabled = !enabled;
-			});
-			// set buttons.disables to stored value
+			inputs.forEach((elem) => (elem.disabled = !personalInfo));
+			// set buttons.disabled to stored value
 			const btn = document.getElementById(`${id}__btn`);
 			btn.disabled = !enabled;
 		};
@@ -57,7 +56,6 @@ const Setting = ({ id, heading, description, values }) => {
 			await storage.set("firstname", firstName);
 			await storage.set("lastname", lastName);
 		}
-		console.log("btn clicked");
 	};
 
 	return (

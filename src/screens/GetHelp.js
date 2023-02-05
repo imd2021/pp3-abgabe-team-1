@@ -18,11 +18,9 @@ function GetHelp() {
 		{
 			title: (
 				<h1>
-					<mark>
-						ICH WERDE&nbsp;
-						<br />
-						&nbsp;BELÄSTIGT!
-					</mark>
+					<mark>&nbsp;ICH WERDE&nbsp;</mark>
+					<br />
+					<mark>&nbsp;BELÄSTIGT!&nbsp;</mark>
 				</h1>
 			),
 			content: (
@@ -55,11 +53,9 @@ function GetHelp() {
 		{
 			title: (
 				<h1>
-					<mark>
-						ICH WERDE&nbsp;
-						<br />
-						&nbsp;BELÄSTIGT!
-					</mark>
+					<mark>&nbsp;ICH WERDE&nbsp;</mark>
+					<br />
+					<mark>&nbsp;BELÄSTIGT!&nbsp;</mark>
 				</h1>
 			),
 			content: (
@@ -84,8 +80,8 @@ function GetHelp() {
 						</li>
 						<li>
 							Setze dich in der Bahn in den ersten Wagen. Dort kann dir der
-							Fahrer/ die Fahrerin am schnellsten zur Hilfe kommen. Schließe dich
-							vertrauenswürdigen Personen an.
+							Fahrer/ die Fahrerin am schnellsten zur Hilfe kommen. Schließe
+							dich vertrauenswürdigen Personen an.
 						</li>
 						<li>Telefoniere mit einer Freundin/einem Freund. </li>
 						<li>
