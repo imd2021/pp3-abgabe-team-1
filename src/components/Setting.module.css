@@ -29,6 +29,8 @@
 	background-color: white;
 	color: #989898;
 	border: 1px solid #989898;
+	padding: 0 2px;
+	width: 150px;
 }
 .input:focus {
 	border: 1px solid #989898;

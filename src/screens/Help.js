@@ -4,7 +4,7 @@ import CrossIcon from "../assets/icons/Cross_orange.svg";
 import HelpIcon from "../assets/icons/Help.svg";
 import styles from "./Help.module.css";
 
-function Help({expanded, setExpanded, content, setContent}) {
+function Help({ expanded, setExpanded, content, setContent }) {
 	// state to keep track of the current index of the cards
 	const [currentIndex, setCurrentIndex] = useState(0);
 	// // state to keep track of whether the help text is displayed
@@ -36,10 +36,10 @@ function Help({expanded, setExpanded, content, setContent}) {
 						<b>02</b> Gehe zu der Person
 					</h2>
 					<p>
-						Gehe zu der Person, welche Hilfe benötigt. Wenn du über BOB
-						einen Hilferuf von einer Person erhalten hast, kannst du diese über
-						“Person auffinden” orten. Folge dabei einfach dem Pfeil auf deinem
-						Display.
+						Gehe zu der Person, welche Hilfe benötigt. Wenn du über BOB einen
+						Hilferuf von einer Person erhalten hast, kannst du diese über den
+						Location-Screen orten. Folge dabei einfach den Distanz- und
+						Richtungs-Angaben Display.
 					</p>
 					<h2>
 						<b>03</b> Person ansprechen
@@ -71,7 +71,7 @@ function Help({expanded, setExpanded, content, setContent}) {
 					</h2>{" "}
 					<p>
 						Behalte weiterhin den Täter/die Täterin im Auge. Sollte er/sie trotz
-						Aufforderungen, das Verhalten zu unterlassen nicht vom Opfer
+						Aufforderungen, das Verhalten zu unterlassen, nicht vom Opfer
 						absehen, informiere umgehend die Polizei. Bleibe ruhig, provoziere
 						den Täter/die Täterin nicht und stelle Distanz zwischen euch her.
 						Bitte andere Personen um Mithilfe.
@@ -81,8 +81,8 @@ function Help({expanded, setExpanded, content, setContent}) {
 					</h2>
 					<p>
 						Präge dir wichtige Merkmale des Täters/der Täterin ein: Wie groß ist
-						der Täter/die Täterin? Welche Haarfarbe hat er oder sie? Wie war er
-						oder sie bekleidet? Gibt es Besonderheiten?
+						der Täter/die Täterin? Welche Haarfarbe hat er/sie? Wie war er/sie
+						bekleidet? Gibt es Besonderheiten?
 					</p>
 					<h2>
 						<b>06</b> Opfer versorgen
@@ -90,7 +90,7 @@ function Help({expanded, setExpanded, content, setContent}) {
 					<p>
 						Kümmere dich um das Opfer. Rufe wenn nötig den Rettungsdienst, wenn
 						das Opfer verletzt sein sollte oder unter Schock steht. Bleibe bei
-						der Betroffenen Person und beruhige sie/ihn. Frage nach, ob sie/er
+						der Betroffenen Person und beruhige ihn/sie. Frage nach, ob er/sie
 						ein Familienmitglied oder einen Freund/Freundin anrufen möchte.
 					</p>
 				</div>
@@ -153,18 +153,38 @@ function Help({expanded, setExpanded, content, setContent}) {
 					>
 						<img src={CrossIcon} alt="Close" />
 					</button>
-					<button
-						className={styles.prevButton}
-						onClick={() => prevCard()}
-					></button>
-					<button
-						className={styles.nextButton}
-						onClick={() => nextCard()}
-					></button>
+
 					<div>
 						<div>{cards[currentIndex].title}</div>
 						<div style={{ margin: "2.5vw" }}>{cards[currentIndex].content}</div>
 					</div>
+
+					<nav className={styles.nav}>
+						<div
+							className={
+								currentIndex === 0
+									? `${styles.navBtn} ${styles.navBtnActive}`
+									: `${styles.navBtn}`
+							}
+							onClick={() => {
+								if (currentIndex !== 0) {
+									prevCard();
+								}
+							}}
+						></div>
+						<div
+							className={
+								currentIndex === 1
+									? `${styles.navBtn} ${styles.navBtnActive}`
+									: `${styles.navBtn}`
+							}
+							onClick={() => {
+								if (currentIndex !== 1) {
+									nextCard();
+								}
+							}}
+						></div>
+					</nav>
 				</div>
 			) : (
 				<img

@@ -39,7 +39,8 @@ function Emergency() {
 	const sendCall = async () => {
 		const id = uuidv4();
 		setCallId(id);
-		await setDoc(doc(db, "emergencies", id), {
+		const emergenciesRef = collection(db, "emergencies");
+		await setDoc(doc(emergenciesRef, id), {
 			deviceID: await storage.get("deviceID"),
 			firstname: await storage.get("firstname"),
 			lastname: await storage.get("lastname"),
@@ -95,8 +96,11 @@ function Emergency() {
 					<div>
 						<p className={styles.helpInformation}>
 							<mark>
-								&nbsp;HILFERUF WIRD&nbsp;<br />&nbsp;IN {countdown}{" "}
-								SEKUNDEN&nbsp;<br />&nbsp;ABGESETZT:&nbsp;
+								&nbsp;HILFERUF WIRD&nbsp;
+								<br />
+								&nbsp;IN {countdown} SEKUNDEN&nbsp;
+								<br />
+								&nbsp;ABGESETZT:&nbsp;
 							</mark>
 						</p>
 						<button className={styles.goBack} onClick={handleGoBack}>
@@ -108,7 +112,9 @@ function Emergency() {
 					<div>
 						<p className={styles.helpInformation}>
 							<mark>
-								&nbsp;HILFERUF WURDE&nbsp;<br />&nbsp;ABGESETZT&nbsp;
+								&nbsp;HILFERUF WURDE&nbsp;
+								<br />
+								&nbsp;ABGESETZT&nbsp;
 							</mark>
 						</p>
 						<button className={styles.goBack} onClick={handleGoBack}>

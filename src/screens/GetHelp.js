@@ -71,7 +71,7 @@ function GetHelp() {
 						Bereite dich gedanklich auf bedrohliche Situationen vor. Nimm deine
 						Umgebung aufmerksam wahr. Wenn dir dein Bauchgefühl sagt, dass die
 						Situation bedrohlich werden könnte, distanziere dich. Einem
-						drohenden Konflikt auszuweichen, ist der beste Art der
+						drohenden Konflikt auszuweichen, ist die beste Art der
 						Konfliktlösung.
 					</p>
 					<h2>
@@ -80,17 +80,17 @@ function GetHelp() {
 					<ul>
 						<li>
 							Setze dich in die Nähe des Fahrers oder in einen Wagen, in dem
-							bereits mehrere Fahrgäste sind
+							bereits mehrere Fahrgäste sind.
 						</li>
 						<li>
 							Setze dich in der Bahn in den ersten Wagen. Dort kann dir der
-							Fahrer/ die Fahrerin am schnellsten zu Hilfe kommen Schließe dich
-							vertrauenswürdigen Personen an
+							Fahrer/ die Fahrerin am schnellsten zur Hilfe kommen. Schließe dich
+							vertrauenswürdigen Personen an.
 						</li>
-						<li>Telefonieren mit einer Freundin/einem Freund </li>
+						<li>Telefoniere mit einer Freundin/einem Freund. </li>
 						<li>
 							Habe dein Handy griffbereit, um Hilfe rufen zu können, wenn es
-							nötig ist
+							nötig ist.
 						</li>
 					</ul>
 				</div>
@@ -153,18 +153,38 @@ function GetHelp() {
 					>
 						<img src={CrossIcon} alt="Close" />
 					</button>
-					<button
-						className={styles.prevButton}
-						onClick={() => prevCard()}
-					></button>
-					<button
-						className={styles.nextButton}
-						onClick={() => nextCard()}
-					></button>
+
 					<div>
 						<div>{cards[currentIndex].title}</div>
 						<div style={{ margin: "2.5vw" }}>{cards[currentIndex].content}</div>
 					</div>
+
+					<nav className={styles.nav}>
+						<div
+							className={
+								currentIndex === 0
+									? `${styles.navBtn} ${styles.navBtnActive}`
+									: `${styles.navBtn}`
+							}
+							onClick={() => {
+								if (currentIndex !== 0) {
+									prevCard();
+								}
+							}}
+						></div>
+						<div
+							className={
+								currentIndex === 1
+									? `${styles.navBtn} ${styles.navBtnActive}`
+									: `${styles.navBtn}`
+							}
+							onClick={() => {
+								if (currentIndex !== 1) {
+									nextCard();
+								}
+							}}
+						></div>
+					</nav>
 				</div>
 			) : (
 				<img

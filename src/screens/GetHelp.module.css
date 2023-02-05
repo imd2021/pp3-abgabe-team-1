@@ -43,16 +43,25 @@
   background-color: transparent;
 }
 
-.prevButton {
-  bottom: 0.5rem;
-  left: 36vw;
-  background-color: #afafaf;
+.nav {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 5%;
+	width: 90%;
+	height: 16px;
 }
-
-.nextButton {
-  bottom: 0.5rem;
-  right: 36vw;
+.navBtn {
+	margin: 0 12px;
+	width: 10px;
+	height: 10px;
   background-color: #afafaf;
+	transition: scale 100ms ease, background-color 100ms ease;
+}
+.navBtnActive {
+	background-color: #4caf50;
+	scale: 1.4;
 }
 
 .sectionArea mark {
