@@ -27,7 +27,7 @@ function GetHelp() {
 				<div>
 					<h2>
 						<b>01</b> Hilfe holen
-					</h2>{" "}
+					</h2>
 					<p>
 						Mache Personen um dich herum auf dich aufmerksam. Sieze den
 						Täter/die Täterin, damit Außenstehenden klar ist, dass es sich nicht
@@ -46,7 +46,7 @@ function GetHelp() {
 						Hilferuf der App wird NICHT die Polizei informiert. Solltest du
 						Hilfe von der Polizei benötigen, wähle die Nummer 110.
 					</p>
-					<h3>Lies auf der nächsten Seite weiter.</h3>
+					<h3>Lies auf den nächsten Seiten weiter.</h3>
 				</div>
 			),
 		},
@@ -62,7 +62,7 @@ function GetHelp() {
 				<div>
 					<h2>
 						<b>02</b> Belästigung vermeiden
-					</h2>{" "}
+					</h2>
 					<p>
 						Bereite dich gedanklich auf bedrohliche Situationen vor. Nimm deine
 						Umgebung aufmerksam wahr. Wenn dir dein Bauchgefühl sagt, dass die
@@ -72,7 +72,7 @@ function GetHelp() {
 					</p>
 					<h2>
 						<b>03</b> Tipps für den ÖPNV
-					</h2>{" "}
+					</h2>
 					<ul>
 						<li>
 							Setze dich in die Nähe des Fahrers oder in einen Wagen, in dem
@@ -89,6 +89,36 @@ function GetHelp() {
 							nötig ist.
 						</li>
 					</ul>
+				</div>
+			),
+		},
+		{
+			title: (
+				<h1>
+					<mark>&nbsp;ICH WERDE&nbsp;</mark>
+					<br />
+					<mark>&nbsp;BELÄSTIGT!&nbsp;</mark>
+				</h1>
+			),
+			content: (
+				<div>
+					<h2>
+						<b>04</b> Anlaufstellen
+					</h2>
+					<p>
+						<br />
+						Hilfetelefon - Gewalt gegen Frauen <br />
+						Telefon: 08000 116 016 <br />
+						Website:{" "}
+						<a href="https://www.hilfetelefon.de">www.hilfetelefon.de</a>
+						<br />
+						<br />
+						<br />
+						Weißer Ring <br />
+						Telefon: 116 006 <br />
+						Website:{" "}
+						<a href="https://www.weisser-ring.de">www.weisser-ring.de</a>
+					</p>
 				</div>
 			),
 		},
@@ -162,11 +192,7 @@ function GetHelp() {
 									? `${styles.navBtn} ${styles.navBtnActive}`
 									: `${styles.navBtn}`
 							}
-							onClick={() => {
-								if (currentIndex !== 0) {
-									prevCard();
-								}
-							}}
+							onClick={() => setCurrentIndex(0)}
 						></div>
 						<div
 							className={
@@ -174,11 +200,15 @@ function GetHelp() {
 									? `${styles.navBtn} ${styles.navBtnActive}`
 									: `${styles.navBtn}`
 							}
-							onClick={() => {
-								if (currentIndex !== 1) {
-									nextCard();
-								}
-							}}
+							onClick={() => setCurrentIndex(1)}
+						></div>
+						<div
+							className={
+								currentIndex === 2
+									? `${styles.navBtn} ${styles.navBtnActive}`
+									: `${styles.navBtn}`
+							}
+							onClick={() => setCurrentIndex(2)}
 						></div>
 					</nav>
 				</div>
