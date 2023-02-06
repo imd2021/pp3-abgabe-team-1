@@ -40,13 +40,25 @@ function Emergency() {
 		const id = uuidv4();
 		setCallId(id);
 		const emergenciesRef = collection(db, "emergencies");
-		await setDoc(doc(emergenciesRef, id), {
-			deviceID: await storage.get("deviceID"),
-			firstname: await storage.get("firstname"),
-			lastname: await storage.get("lastname"),
-			createdAt: serverTimestamp(),
-			pos: await currentPosition(),
-		});
+
+		const name = await storage.get("personalInfo");
+		if (name) {
+			await setDoc(doc(emergenciesRef, id), {
+				deviceID: await storage.get("deviceID"),
+				firstname: await storage.get("firstname"),
+				lastname: await storage.get("lastname"),
+				createdAt: serverTimestamp(),
+				pos: await currentPosition(),
+			});
+		} else {
+			await setDoc(doc(emergenciesRef, id), {
+				deviceID: await storage.get("deviceID"),
+				firstname: "",
+				lastname: "",
+				createdAt: serverTimestamp(),
+				pos: await currentPosition(),
+			});
+		}
 	};
 
 	const deleteCall = async () => {
