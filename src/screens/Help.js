@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import CrossIcon from "../assets/icons/Cross_orange.svg";
 import HelpIcon from "../assets/icons/Help.svg";
@@ -7,8 +7,6 @@ import styles from "./Help.module.css";
 function Help({ expanded, setExpanded, content, setContent }) {
 	// state to keep track of the current index of the cards
 	const [currentIndex, setCurrentIndex] = useState(0);
-	// // state to keep track of whether the help text is displayed
-	// const [showContent, setShowContent] = useState(false);
 
 	// array of cards to display home
 	const cards = [

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import CrossIcon from "../assets/icons/Cross_green.svg";
 import stopIcon from "../assets/icons/Stop.svg";

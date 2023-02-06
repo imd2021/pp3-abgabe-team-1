@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Settings.module.css";
 import Setting from "../components/Setting";
 import exit from "../assets/exit.svg";

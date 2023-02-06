@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./SectionBottom.module.css";
 
 const SectionBottom = ({ color, children, handleClick }) => {
