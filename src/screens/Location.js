@@ -111,7 +111,9 @@ const Location = ({ calls, openHelp }) => {
 						) : (
 							<div className={styles.locationContent}>
 								<div className={styles.destination}>
-									<h2 className={styles.destination__name}>{calls[0].firstname}</h2>
+									<h2 className={styles.destination__name}>
+										{calls[0].firstname}
+									</h2>
 									<img
 										className={styles.destinationPoint}
 										src={destinationPoint}
@@ -146,26 +148,17 @@ const Location = ({ calls, openHelp }) => {
 							</div>
 						)}
 
-						{calls.length === 0 || calls[0].deviceID === deviceID ? (
-							<SectionBottom
-								color="#FF9D28"
-								handleClick={() => {
-									openHelp();
-									handleBackToHomeClick();
-								}}
-							>
-								<img
-									className={styles.section__icon}
-									src={help}
-									alt="Lifebelt"
-								/>
-								<p>Lies dir hier durch, wie du helfen kannst!</p>
-							</SectionBottom>
-						) : (
-							<SectionBottom color="#3F3FC2" handleClick={handleFound}>
-								<h1>GEFUNDEN!</h1>
-							</SectionBottom>
-						)}
+						<SectionBottom
+							color="#FF9D28"
+							handleClick={() => {
+								openHelp();
+								handleBackToHomeClick();
+							}}
+						>
+							<img className={styles.section__icon} src={help} alt="Lifebelt" />
+							<p>Lies dir hier durch, wie du helfen kannst!</p>
+						</SectionBottom>
+
 						<img
 							className={styles.exitBtn}
 							src={exit}
