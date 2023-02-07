@@ -10,7 +10,6 @@ const Setting = ({ id, heading, description, values }) => {
 	useEffect(() => {
 		const initSetting = async () => {
 			const enabled = await storage.get(id);
-			console.log(await storage.get(id));
 
 			// get personal info from storage
 			const storedFirstname = await storage.get("firstname");

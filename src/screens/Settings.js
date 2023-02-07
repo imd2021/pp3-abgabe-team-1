@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Settings.module.css";
 import Setting from "../components/Setting";
-import exit from "../assets/exit.svg";
+import cross from "../assets/icons/Cross.svg";
 import SettingsIcon from "../assets/icons/Settings.svg";
 
 const Settings = () => {
@@ -56,7 +56,7 @@ const Settings = () => {
 					</div>
 					<img
 						className={styles.exitBtn}
-						src={exit}
+						src={cross}
 						alt="Exit Button"
 						onClick={handleBackToHomeClick}
 					/>

@@ -41,6 +41,10 @@
 	right: 0vw;
 	background-color: transparent;
 }
+.homeButtonGreen img {
+	width: 46px;
+	height: 46px;
+}
 
 .nav {
 	position: absolute;

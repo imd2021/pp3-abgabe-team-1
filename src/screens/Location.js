@@ -4,7 +4,7 @@ import styles from "./Location.module.css";
 import LocationIcon from "../assets/icons/Location.svg";
 import destinationPoint from "../assets/destinationPoint.svg";
 import directionArrow from "../assets/directionArrow.svg";
-import exit from "../assets/exit.svg";
+import cross from "../assets/icons/Cross.svg";
 import help from "../assets/help.svg";
 import { Geolocation } from "@capacitor/geolocation";
 import storage from "../storage";
@@ -161,7 +161,7 @@ const Location = ({ calls, openHelp }) => {
 
 						<img
 							className={styles.exitBtn}
-							src={exit}
+							src={cross}
 							alt="Exit Button"
 							onClick={handleBackToHomeClick}
 						/>
