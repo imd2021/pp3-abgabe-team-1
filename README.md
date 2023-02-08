@@ -1,6 +1,9 @@
+# BOB
+Diese App ist ein Prototyp für **BOB** (Bahnfahren ohne Belästigung). Es handelt sich hierbei um ein System, welches Opfern von Belästigung im ÖPNV ermöglicht, sich schnell Hilfe zu holen. Der Prototyp wurde vorerst nur für Android optimiert.
 
+<br />
 
-### ANDROID SETUP
+## ANDROID SETUP
 Um die App auf einem Android-Gerät zum Laufen zu bringen, bitte folgende Schritte befolgen:
 
 1. Repository klonen
@@ -9,7 +12,7 @@ Um die App auf einem Android-Gerät zum Laufen zu bringen, bitte folgende Schrit
 
 3. Im root-Ordner des Projekts das Terminal öffnen
 
-4. Alle erforderlichen packages installieren mit `npm install`
+4. Alle erforderlichen Packages installieren mit `npm install`
 
 5. Die Android-App mit `npx ionic cap build android` erstellen (Daraufhin sollte sich Android Studio mit dem Projekt öffnen.)
 
@@ -21,12 +24,15 @@ Um die App auf einem Android-Gerät zum Laufen zu bringen, bitte folgende Schrit
 8. App ausführen mit dem "Run"-Button in Android Studio </br>
 <img src="./pictures/runApp.png" width="400px">
 
-### WEB SETUP
+<br />
+<br />
+
+## WEB SETUP
 1. Repository klonen
 
 2. Im root-Ordner des Projekts das Terminal öffnen
 
-3. Alle erforderlichen packages installieren mit `npm install`
+3. Alle erforderlichen Packages installieren mit `npm install`
 
 4. Web-App starten mit `npm start`
 
