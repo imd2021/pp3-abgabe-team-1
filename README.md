@@ -30,6 +30,10 @@ Um die App auf einem Android-Gerät zum Laufen zu bringen, bitte folgende Schrit
 
 3. Alle erforderlichen packages installieren mit `npm install`
 
-4. Web-App starten mit `npm start`
+4. ```
+    experiments: {
+      topLevelAwait: true,
+    },
+5. Web-App starten mit `npm start`
 
 (**Wichtig:** Die Anwendung verfügt in der Browser-Version nicht über alle wichtigen Funktionen. Sie dient ausschließlich zum Testen und Entwickeln.)
