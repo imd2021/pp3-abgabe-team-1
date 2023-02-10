@@ -3,6 +3,7 @@ import { useSwipeable } from "react-swipeable";
 import CrossIcon from "../assets/icons/Cross_orange.svg";
 import HelpIcon from "../assets/icons/Help.svg";
 import styles from "./Help.module.css";
+import "../fontface.css";
 
 function Help({ expanded, setExpanded, content, setContent }) {
 	// state to keep track of the current index of the cards
@@ -140,7 +141,10 @@ function Help({ expanded, setExpanded, content, setContent }) {
 		>
 			{/* Conditional rendering: if showContent is true, display the help text, otherwise, display the stop icon */}
 			{content ? (
-				<div className={styles.help__textContainer}>
+				<div
+					className={styles.help__textContainer}
+					style={{ fontFamily: "Poppins" }}
+				>
 					<button
 						className={styles.homeButtonOrange}
 						onClick={handleBackToHomeClick}
