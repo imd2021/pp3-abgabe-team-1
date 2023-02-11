@@ -18,10 +18,17 @@ Um die App auf einem Android-Gerät zum Laufen zu bringen, bitte folgende Schrit
 
 6. Die App-Icons aus dem resources-Ordner mit `npx cordova-res android --skip-config --copy` in den Android-Build einbauen (über das Terminal)
 
-7. Ein Android Handy per USB mit dem PC verbinden und in Android Studio auswählen </br>
+7. Um der App Zugriff auf Standortdienste zu geben, folgende Zeilen über Android Studio in "AndroidManifest.xml" einfügen (Die Datei befindet sich in Android Studio unter `/app/manifest/AndroidManifest.xml`)
+```
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-feature android:name="android.hardware.location.gps" />
+```
+
+8. Ein Android Handy per USB mit dem PC verbinden und in Android Studio auswählen </br>
 <img src="./pictures/choosingDevice.png" width="400px">
 
-8. App ausführen mit dem "Run"-Button in Android Studio </br>
+9. App ausführen mit dem "Run"-Button in Android Studio </br>
 <img src="./pictures/runApp.png" width="400px">
 
 <br />
