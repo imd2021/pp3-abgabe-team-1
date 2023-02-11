@@ -14,21 +14,14 @@ Um die App auf einem Android-Gerät zum Laufen zu bringen, bitte folgende Schrit
 
 4. Alle erforderlichen Packages installieren mit `npm install`
 
-5. Die Android-App mit `npx ionic cap build android` erstellen (Daraufhin sollte sich Android Studio mit dem Projekt öffnen.)
+5. Die Android-App mit `npx ionic cap sync` fertigstellen
 
-6. Die App-Icons aus dem resources-Ordner mit `npx cordova-res android --skip-config --copy` in den Android-Build einbauen (über das Terminal) und alle 5 Ordner unter `/resources/android/notification-icons/` in `/android/app/src/main/res/` hineinkopieren
+6. Die App in Android Studio mit `npx ionic cap open android` öffnen (oder in Android Studio über File -> Open den "android"-Ordner im Projektordner auswählen)
 
-7. Um der App Zugriff auf Standortdienste zu geben, folgende Zeilen über Android Studio in "AndroidManifest.xml" unter "<!- Permissions ->" einfügen (Die Datei befindet sich in Android Studio unter `/app/manifest/AndroidManifest.xml`)
-```
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-feature android:name="android.hardware.location.gps" />
-```
-
-8. Ein Android Handy per USB mit dem PC verbinden und in Android Studio auswählen </br>
+7. Ein Android Handy per USB mit dem PC verbinden und in Android Studio auswählen </br>
 <img src="./pictures/choosingDevice.png" width="400px">
 
-9. App ausführen mit dem "Run"-Button in Android Studio </br>
+8. App ausführen mit dem "Run"-Button in Android Studio </br>
 <img src="./pictures/runApp.png" width="400px">
 
 <br />
