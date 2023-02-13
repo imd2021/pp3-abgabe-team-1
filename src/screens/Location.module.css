@@ -4,17 +4,17 @@
 }
 
 .sectionArea {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50vw;
-  width: 50vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vw;
+	width: 50vw;
 	color: white;
-  background-color: #FF4874;
-  position: absolute;
+	background-color: #ff4874;
+	position: absolute;
 	bottom: 0;
 	right: 0;
-  transition: all 175ms ease-out;
+	transition: all 175ms ease-out;
 	z-index: 99;
 }
 .icon {
@@ -22,9 +22,9 @@
 }
 
 .sectionArea.expanded {
-  height: 100%;
-  width: 100%;
-  z-index: 999;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
 }
 
 h2 {
@@ -44,16 +44,16 @@ h2 {
 }
 .emptyInfo h1 {
 	text-align: start;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
+	font-size: 2rem;
 }
 .emptyInfo h1 span {
-	color: #FF4874;
+	color: #ff4874;
 	background-color: white;
 	padding: 0 8px;
-	margin: 0 12px;
 }
 .emptyInfo p {
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 
 .locationContent {
@@ -72,6 +72,7 @@ h2 {
 	margin-top: 14vh;
 }
 .destination__name {
+	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -81,6 +82,12 @@ h2 {
 	align-items: baseline;
 	justify-content: space-around;
 	margin-bottom: 16vh;
+}
+.destinationInfo h1 {
+	font-size: 1.8rem;
+}
+.destinationInfo h2 {
+	font-size: 1.2rem;
 }
 
 .exitBtn {

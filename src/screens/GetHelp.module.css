@@ -76,30 +76,30 @@
 
 .sectionArea h1 {
 	text-align: left;
-	font-size: 9vw;
+	font-size: 1.4rem;
 	font-weight: 700;
-	margin: 7.2vw 5vw 8vw 6vw;
+	margin: 7.2vw 0 1rem 6vw;
 	line-height: 110%;
 }
 
 .sectionArea h2 {
-	font-size: 5vw;
+	font-size: 0.7rem;
 	font-weight: 500;
 	color: #4caf50;
-	margin: 2.5vw;
+	margin-left: 2.5vw;
 }
 
 .sectionArea h3 {
-	font-size: 3.6vw;
+	font-size: 10px;
 	font-weight: 600;
 	color: #4caf50;
 	margin-left: 2.5vw;
 }
 
 .sectionArea p {
-	font-size: 3.6vw;
-	margin: 2.5vw;
-	margin-bottom: 6vw;
+	font-size: 10px;
+	margin: 0 2.5vw;
+	margin-bottom: 0.4rem;
 	color: #000000;
 	line-height: 120%;
 }
@@ -109,15 +109,15 @@
 }
 
 .sectionArea ul {
-	font-size: 3.6vw;
-	margin: 2.5vw;
-	margin-bottom: 6vw;
+	font-size: 10px;
+	margin: 0 2.5vw;
+	margin-bottom: 1rem;
 	color: #000000;
 	padding-left: 5vw;
 	line-height: 120%;
 }
 
 .sectionArea li {
-	padding-bottom: 3vw;
+	padding-bottom: 8px;
 	font-weight: 500;
 }

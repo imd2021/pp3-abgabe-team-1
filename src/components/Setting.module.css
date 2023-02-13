@@ -6,31 +6,38 @@
 	margin: 12px 0;
 }
 .setting p {
-	font-size: 12px;
+	font-size: 10px;
+	line-height: 15px;
 }
 
 .setting__head h2 {
+	font-size: 1.1rem;
 	width: 78%;
 	color: #989898;
 	font-weight: bold;
-	margin: 12px 12px;
-	line-height: 24px;
+	margin: 12px;
+	line-height: 20px;
 }
 
+.setting__description {
+	margin: 0 12px;
+	line-height: 15px;
+}
 .setting__values {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	margin: 16px 0 8px 0;
+	margin: 8px 12px;
 	line-height: 22px;
 }
 
 .input {
+	font-size: 10px;
 	background-color: #d9d9d9;
 	color: #989898;
 	border: 0;
 	padding: 0 2px;
-	width: 150px;
+	width: 135px;
 }
 .input:focus {
 	border: 0;
@@ -38,10 +45,10 @@
 }
 
 .save {
+	font-size: 0.7rem;
 	background: transparent;
 	color: #989898;
 	border: 0;
-	margin-right: 12px;
 	padding: 1px 4px;
 	transition: background-color 100ms ease;
 }

@@ -22,11 +22,8 @@
 	justify-content: center;
 }
 
-h1 {
-	text-align: center;
-	font-size: 13vw;
-}
-p {
+.section__container p {
+	font-size: 12px;
 	font-weight: 500;
 	margin: 0 12px;
 }

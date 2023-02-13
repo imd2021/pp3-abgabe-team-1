@@ -77,31 +77,30 @@
 
 .sectionArea h1 {
 	text-align: left;
-	font-size: 9vw;
+	font-size: 1.4rem;
 	font-weight: 700;
-	margin: 7.2vw 5vw 6vw 6vw;
+	margin: 7.2vw 0 1rem 6vw;
 	line-height: 110%;
 }
 
 .sectionArea h2 {
-	font-size: 5vw;
+	font-size: 0.7rem;
 	font-weight: 500;
 	color: #ff9d28;
-	margin: 2.5vw;
-	margin-bottom: 0;
+	margin-left: 2.5vw;
 }
 
 .sectionArea h3 {
-	font-size: 3.6vw;
+	font-size: 10px;
 	font-weight: 600;
 	color: #ff9d28;
 	margin-left: 2.5vw;
 }
 
 .sectionArea p {
-	font-size: 3.6vw;
-	margin: 2.5vw;
-	margin-bottom: 4vw;
+	font-size: 10px;
+	margin: 0 2.5vw;
+	margin-bottom: 0.7rem;
 	color: #000000;
 	line-height: 120%;
 }
