@@ -6,8 +6,9 @@ import destinationPoint from "../assets/destinationPoint.svg";
 import directionArrow from "../assets/directionArrow.svg";
 import cross from "../assets/icons/Cross.svg";
 import help from "../assets/help.svg";
-import { Geolocation } from "@capacitor/geolocation";
 import storage from "../storage";
+import { Geolocation } from "@capacitor/geolocation";
+import { DeviceOrientation } from "@awesome-cordova-plugins/device-orientation";
 
 const deviceID = await storage.get("deviceID");
 
@@ -17,9 +18,12 @@ const Location = ({ calls, openHelp }) => {
 	// state to keep track of whether the section is expanded
 	const [isExpanded, setIsExpanded] = useState(false);
 	// GPS coordinates of the device
-	const [coordinates, setCoordiantes] = useState({ lat: 0, lon: 0 });
+	const [coordinates, setCoordiantes] = useState({});
 
 	const [watchingPosition, setWatchingPosition] = useState(false);
+
+	const [north, setNorth] = useState(0);
+	const [angle, setAngle] = useState(0);
 
 	useEffect(() => {
 		if (
@@ -51,8 +55,32 @@ const Location = ({ calls, openHelp }) => {
 			lon: response.coords.longitude,
 		};
 		setCoordiantes(coords);
-		console.log(coords);
 	};
+
+	useEffect(() => {
+		// event listener for device orientation
+		const subscribtion = DeviceOrientation.watchHeading().subscribe((data) => {
+			setNorth(data.magneticHeading);
+		});
+
+		return () => {
+			subscribtion.unsubscribe();
+		};
+	}, []);
+
+	useEffect(() => {
+		// calculates angle between both devices
+		if (coordinates.lat && calls.length > 0) {
+			const radian =
+				(Math.atan2(
+					calls[0].pos.lon - coordinates.lat,
+					calls[0].pos.lat - coordinates.lon
+				) +
+					Math.PI / 2) %
+				(2 * Math.PI);
+			setAngle((radian / Math.PI) * 180);
+		}
+	}, [north]);
 
 	// math from http://www.movable-type.co.uk/scripts/gis-faq-5.1.html
 	const calculateDistance = (lat1, lon1, lat2, lon2) => {
@@ -72,8 +100,6 @@ const Location = ({ calls, openHelp }) => {
 
 		return R * c; // distance in metres
 	};
-
-	const handleFound = () => {};
 
 	const handleLocationClick = () => {
 		setIsExpanded(true);
@@ -125,6 +151,9 @@ const Location = ({ calls, openHelp }) => {
 									className={styles.directionArrow}
 									src={directionArrow}
 									alt="Direction Arrow"
+									style={{
+										transform: `rotate(${north + angle}deg)`,
+									}}
 								/>
 
 								<div className={styles.destinationInfo}>
@@ -137,7 +166,7 @@ const Location = ({ calls, openHelp }) => {
 													coordinates.lat,
 													coordinates.lon
 												) * 10
-											) / 10}
+											) / 10 || "0"}
 										</span>{" "}
 										M
 									</h1>
