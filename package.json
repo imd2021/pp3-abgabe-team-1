@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@awesome-cordova-plugins/device-orientation": "^6.3.0",
     "@capacitor/android": "4.6.1",
     "@capacitor/app": "4.1.1",
     "@capacitor/cli": "^4.6.1",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
+    "cordova-plugin-device-orientation": "^2.0.1",
     "cordova-plugin-screen-orientation": "^3.0.2",
     "cordova-res": "^0.15.4",
     "es6-promise-plugin": "^4.2.2",
