@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..98c7381 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -603,6 +603,9 @@ module.exports = function (webpackEnv) {
+         },
+       ].filter(Boolean),
+     },
++    experiments: {
++      topLevelAwait: true,
++    },
+     plugins: [
+       // Generates an `index.html` file with the <script> injected.
+       new HtmlWebpackPlugin(
